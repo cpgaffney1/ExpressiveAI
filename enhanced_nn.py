@@ -37,48 +37,21 @@ def main():
     if key == "-r":
         print("running regularization experiment")
         # regularization experiment
-        mus_x_train, rec_x_train, core_train_features, y_train = load_data()
+        mus_x_train, rec_x_train, core_train_features, y_train = util.load_data()
         run_reg_experiment(mus_x_train, rec_x_train, core_train_features, y_train)
     elif key == "-l":
         print("running linear model experiment")
         # linear model experiment
         n_features = int(argv[1])
-        mus_x_train, rec_x_train, core_train_features, y_train = load_data(core_input_shape=n_features)
+        mus_x_train, rec_x_train, core_train_features, y_train = util.load_data(core_input_shape=n_features)
         run_linear(core_train_features, y_train, input_shape=n_features)
     elif key == "-n":
         print("running neural network experiment")
         # neural network
-        mus_x_train, rec_x_train, core_train_features, y_train = load_data()
-        #run(mus_x_train, rec_x_train, core_train_features, y_train)
+        mus_x_train, rec_x_train, core_train_features, y_train = util.load_data()
+        run(mus_x_train, rec_x_train, core_train_features, y_train)
     else:
         print("Error, unrecognized case")
-
-def load_data(core_input_shape=5):
-    musList, recList, matchesMapList, songNames = util.parseMatchedInput('javaOutput/javaOutput', range(0,20))
-    musList, recList = util.normalizeTimes(musList, recList)
-    recList, matchesMapList = util.trim(recList, matchesMapList)
-
-
-    for i in range(len(musList)):
-        mus = musList[i]
-        rec = recList[i]
-        count = 0
-        match = matchesMapList[i]
-        keys = sorted(match.keys())
-        for mIndex in keys:
-            m = mus[mIndex]
-            r = rec[match[m['index']]]
-            r['offset'] = r['start_normal'] - m['start_normal']
-            print(r['start_normal'] - m['start_normal'])
-            count += 1
-
-    x, y = util.dataAsWindow(musList, recList, matchesMapList)
-    x_train = x.astype('float32')
-    y_train = y.astype('float32')
-    mus_x_train, rec_x_train, core_train_features = util.splitData(x_train, core_input_size=core_input_shape)
-    mus_x_train, rec_x_train, core_train_features = mus_x_train.astype('float32'), rec_x_train.astype(
-        'float32'), core_train_features.astype('float32')
-    return mus_x_train, rec_x_train, core_train_features, y_train
 
 
 def run(mus_x_train, rec_x_train, core_train_features, y_train):
@@ -103,10 +76,9 @@ def run(mus_x_train, rec_x_train, core_train_features, y_train):
 
     concat2 = layers.concatenate([mus_rec_dense, layers.Flatten()(mus_input), layers.Flatten()(rec_input)], axis=-1)
     mus_rec_dense2 = (Dense(64, activation='relu', kernel_initializer=init, name='combined_layer_2')(concat2))
-    mus_rec_dense3 = (Dense(64, activation='relu', kernel_initializer=init, name='combined_layer_3')(mus_rec_dense2))
-
     theta = layers.concatenate([mus_rec_dense2, core_input], axis=-1)
-    output = Dense(2, activation='linear', kernel_initializer=init, name='output')(mus_rec_dense3)
+    mus_rec_dense3 = (Dense(64, activation='relu', kernel_initializer=init, name='combined_layer_3')(theta))
+    output = Dense(2, activation='linear', kernel_initializer=init, name='output', kernel_regularizer=reg.l2(1))(mus_rec_dense3)
 
     model = Model(inputs=[mus_input, rec_input, core_input], outputs=[output])
 
@@ -119,7 +91,7 @@ def run(mus_x_train, rec_x_train, core_train_features, y_train):
     #print(model.get_layer("output").get_weights())
 
     model.save('enhanced_nn_model.h5')
-    predict.predict(model)
+    predict.predict(model, withOffset=True)
 
 def run_linear(core_train_features, y_train, input_shape=5):
     init = TruncatedNormal(mean=0.0, stddev=0.1, seed=None)

@@ -319,6 +319,19 @@ def dataAsSequentialForPredict(mus, matches):
     assert(len(songLengths) == len(musList))
     return x, y, songLengths '''
 
+def load_data(core_input_shape=5):
+    musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,20))
+    musList, recList = normalizeTimes(musList, recList)
+    recList, matchesMapList = trim(recList, matchesMapList)
+    musList, recList = addOffsets(musList, recList, matchesMapList)
+    x, y = dataAsWindow(musList, recList, matchesMapList)
+    x_train = x.astype('float32')
+    y_train = y.astype('float32')
+    mus_x_train, rec_x_train, core_train_features = splitData(x_train, core_input_size=core_input_shape)
+    mus_x_train, rec_x_train, core_train_features = mus_x_train.astype('float32'), rec_x_train.astype(
+        'float32'), core_train_features.astype('float32')
+    return mus_x_train, rec_x_train, core_train_features, y_train
+
 def denormalizeTimes(predictions, lastTime):
     for i in range(len(predictions)):
         for j in range(len(predictions[0])):
@@ -337,6 +350,21 @@ def normalizeTimes(musList, recList):
         for note in recList[i]:
             note['start_normal'] = (note['start'] * 100) / lastTime
             note['end_normal'] = (note['end'] * 100) / lastTime
+    return musList, recList
+
+def addOffsets(musList, recList, matchesMapList):
+    for i in range(len(musList)):
+        mus = musList[i]
+        rec = recList[i]
+        count = 0
+        match = matchesMapList[i]
+        keys = sorted(match.keys())
+        for mIndex in keys:
+            m = mus[mIndex]
+            r = rec[match[mIndex]]
+            r['offset'] = r['start_normal'] - m['start_normal']
+            #print(r['start_normal'] - m['start_normal'])
+            count += 1
     return musList, recList
 
 def convertToStatefulBatched(x_train, y_train):
