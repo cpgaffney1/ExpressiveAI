@@ -49,7 +49,7 @@ def main():
         print("running neural network experiment")
         # neural network
         mus_x_train, rec_x_train, core_train_features, y_train = load_data()
-        run(mus_x_train, rec_x_train, core_train_features, y_train)
+        #run(mus_x_train, rec_x_train, core_train_features, y_train)
     else:
         print("Error, unrecognized case")
 
@@ -59,12 +59,18 @@ def load_data(core_input_shape=5):
     recList, matchesMapList = util.trim(recList, matchesMapList)
 
 
-    mus = musList[0]
-    for m in mus:
-        if m['index'] in matchesMapList[0]:
-            r = recList[0][matchesMapList[0][m['index']]]
+    for i in range(len(musList)):
+        mus = musList[i]
+        rec = recList[i]
+        count = 0
+        match = matchesMapList[i]
+        keys = sorted(match.keys())
+        for mIndex in keys:
+            m = mus[mIndex]
+            r = rec[match[m['index']]]
+            r['offset'] = r['start_normal'] - m['start_normal']
             print(r['start_normal'] - m['start_normal'])
-
+            count += 1
 
     x, y = util.dataAsWindow(musList, recList, matchesMapList)
     x_train = x.astype('float32')
