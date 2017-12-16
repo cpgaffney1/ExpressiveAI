@@ -27,10 +27,8 @@ def trim(recList, matchesMapList):
             musIndex = keys[j]
             recIndex = matchesMapList[i][musIndex]
             recNote = recList[i][recIndex]
-            #print('start ' + str(recNote['start_normal']))
             window.append(recNote['start_normal'])
             moving_avg = sum(window) / len(window)
-            #print(moving_avg)
             if abs(recNote['start_normal'] - moving_avg) > 4:
                 print(moving_avg)
                 del recList[i][recIndex]
@@ -93,25 +91,20 @@ def dataAsWindow(musList, recList, matchesMapList, simplified=False, verySimple=
                 if not verySimple: x_obs.append(mus[musIndex]['key'])
                 if not verySimple: x_obs.append(mus[musIndex]['onv'])
                 if k < TIMESTEPS + 1:
-                    #if k == 0:
-                        #print(prevRecIndex)
-                        #print(rec[prevRecIndex]['start_normal'])
-                    if not verySimple: x_obs.append(rec[prevRecIndex]['start_normal'])
+                    if not verySimple: x_obs.append(rec[prevRecIndex]['offset'])
                     x_obs.append(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'])
                     assert(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'] >= 0)
                 prevRecIndex = match[musIndex]
 
             x[obs_index] = np.asarray(x_obs)
-            rec_start = rec[match[keys[i]]]['start_normal']
-            y[obs_index] = [rec_start, rec[match[keys[i]]]['end_normal'] - rec_start]
-            assert(rec[match[keys[i]]]['end_normal'] - rec_start) >= 0
-            #print(x_obs)
-            #print('mus {}, rec {}'.format(mus[keys[i]]['start_normal'], rec[match[keys[i]]]['start_normal']))
+            recNote = rec[match[keys[i]]]
+            y[obs_index] = [recNote['offset'], recNote['end_normal'] - recNote['start_normal']]
+            assert(rec[match[keys[i]]]['end_normal'] - recNote['start_normal']) >= 0
             obs_index += 1
     assert(len(x) == len(y))
     return x, y
 
-
+'''
 def dataAsWindowForPredict(mus, rec, match, simplified=False, verySimple=False):
     if verySimple: simplified = True
     print('transforming')
@@ -152,8 +145,9 @@ def dataAsWindowForPredict(mus, rec, match, simplified=False, verySimple=False):
         obs_index += 1
     print('done transforming')
     return x, initial_predictions, musNoteIndices
+'''
 
-
+'''
 def dataAsSequential(musList, recList, matchesMapList):
     print('transforming')
     print(musList[0][0])
@@ -237,7 +231,7 @@ def splitSeqChord(mus_x_train, rec_x_train, core_train_features, y_train, isSeq)
         return mus_train_seq, rec_train_seq, core_train_seq, y_train_seq
     else:
         return mus_train_chord, rec_train_chord, core_train_chord, y_train_chord
-
+'''
 def splitData(x, core_input_size=5):
     assert(core_input_size >= 1 and core_input_size <= 5)
     mus_x_train = np.zeros((len(x), 2 * TIMESTEPS + 1, 4))
