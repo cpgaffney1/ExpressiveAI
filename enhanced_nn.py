@@ -14,19 +14,27 @@ from keras.constraints import non_neg
 import keras.backend as K
 import datetime
 import fileinput
+import tensorflow as tf
 
-BATCH_SIZE = 256
+BATCH_SIZE = 512
+
+difference_mat = np.zeros((BATCH_SIZE * 2 - 1, BATCH_SIZE * 2))
+for i in range(difference_mat.shape[0]):
+    for j in range(difference_mat.shape[1]):
+        if i == j:
+            difference_mat[i][j] = -1
+        if i + 1 == j:
+            difference_mat[i][j] = 1
+print(difference_mat)
 
 def custom_loss(y_true, y_pred):
-    condition = K.cast(K.greater_equal(y_pred, y_true), 'float32')
-    loss = 0
-    loss += K.sum(condition)
-    print(condition.get_shape())
-    loss /= K.count_params(condition)
-    loss *= K.mean(K.dot(condition, K.abs(y_pred - y_true)), axis=-1)
-    not_condition = K.cast(K.less(y_pred, y_true), 'float32')
-    loss += K.sum(not_condition) / K.count_params(not_condition) * K.mean(K.dot(not_condition, K.exp(y_true - y_pred)), axis=-1)
-    return loss
+    reg_weight = 0.001
+    square_mat = K.dot(y_pred, K.transpose(y_pred))
+    y_flat = y_pred[:,0:1]
+    difference_mat_var = K.variable(difference_mat)
+    difference_mat_var = tf.slice(difference_mat_var, [0, 0], K.shape(square_mat))
+    difference_mat_var = difference_mat_var[:-1,:]
+    return K.mean(K.square(y_pred - y_true), axis=-1) + reg_weight * K.mean(K.square(tf.matmul(difference_mat_var, y_flat)))
 
 def main():
     from sys import argv
@@ -55,39 +63,33 @@ def main():
 
 
 def run(mus_x_train, rec_x_train, core_train_features, y_train):
-    init = TruncatedNormal(mean=0.0, stddev=0.1, seed=None)
+    init = TruncatedNormal(mean=0.0, stddev=0.01, seed=None)
     mus_input = Input(shape=(2 * util.TIMESTEPS + 1, 4))
     rec_input = Input(shape=(util.TIMESTEPS + 1, 2))
-    core_input = Input(shape=(5,))
 
-    # mus layers
-    mus_conv = layers.Conv1D(16, 4, activation='relu',
-                             input_shape=(2 * util.TIMESTEPS + 1, 4), kernel_initializer=init)(mus_input)
-    mus_pool = layers.MaxPool1D(pool_size=4, strides=None, padding='valid')(mus_conv)
-    mus_dense = (Dense(16, activation='relu', kernel_initializer=init)(mus_pool))
-    # rec layers
-    rec_conv = layers.Conv1D(16, 4, activation='relu',
-                             input_shape=(2 * util.TIMESTEPS + 1, 4), kernel_initializer=init)(rec_input)
-    rec_pool = layers.MaxPool1D(pool_size=4, strides=None, padding='valid')(rec_conv)
-    rec_dense = (Dense(16, activation='relu', kernel_initializer=init)(rec_pool))
+    reg_weight = 0.001
 
-    concat = layers.concatenate([layers.Flatten()(mus_dense), layers.Flatten()(rec_dense)], axis=-1)
-    mus_rec_dense = (Dense(32, activation='relu', kernel_initializer=init, name='combined_layer_1')(concat))
+    mus = Dense(64, activation='relu',
+                kernel_regularizer=reg.l2(reg_weight), bias_regularizer=reg.l2(reg_weight))(mus_input)
+    rec = Dense(64, activation='relu',
+                kernel_regularizer=reg.l2(reg_weight), bias_regularizer=reg.l2(reg_weight))(rec_input)
 
-    concat2 = layers.concatenate([mus_rec_dense, layers.Flatten()(mus_input), layers.Flatten()(rec_input)], axis=-1)
-    mus_rec_dense2 = (Dense(64, activation='relu', kernel_initializer=init, name='combined_layer_2')(concat2))
-    theta = layers.concatenate([mus_rec_dense2, core_input], axis=-1)
-    mus_rec_dense3 = (Dense(64, activation='relu', kernel_initializer=init, name='combined_layer_3')(theta))
-    output = Dense(2, activation='linear', kernel_initializer=init, name='output', kernel_regularizer=reg.l2(1))(mus_rec_dense3)
+    concat = layers.concatenate([layers.Flatten()(mus), layers.Flatten()(rec)], axis=-1)
+    mus_rec_dense = (Dense(128, activation='relu', kernel_initializer=init, name='combined_layer_1')(concat))
 
-    model = Model(inputs=[mus_input, rec_input, core_input], outputs=[output])
+    mus_rec_dense3 = (Dense(32, activation='relu', kernel_initializer=init, name='combined_layer_3',
+                   kernel_regularizer=reg.l2(reg_weight), bias_regularizer=reg.l2(reg_weight))(mus_rec_dense))
 
-    model.compile(loss='mean_squared_error', optimizer='adam', metrics=[])
-    reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.00000001)
-    early_stopping = EarlyStopping(monitor='val_loss', patience=20)
+    output = Dense(2, activation='linear', kernel_initializer=init, name='output',
+                   kernel_regularizer=reg.l2(reg_weight), bias_regularizer=reg.l2(reg_weight))(mus_rec_dense3)
+
+    model = Model(inputs=[mus_input, rec_input], outputs=[output])
+
+    model.compile(loss=custom_loss, optimizer='adam', metrics=[])
+    early_stopping = EarlyStopping(monitor='val_loss', patience=3)
     N_EPOCHS = 1000
-    history = model.fit([mus_x_train, rec_x_train, core_train_features], [y_train], validation_split=0.1,
-              batch_size=BATCH_SIZE, epochs=N_EPOCHS, callbacks=[early_stopping, reduce_lr], shuffle=True)
+    history = model.fit([mus_x_train, rec_x_train], [y_train], validation_split=0.1,
+              batch_size=BATCH_SIZE, epochs=N_EPOCHS, callbacks=[early_stopping], shuffle=False)
     #print(model.get_layer("output").get_weights())
 
     model.save('enhanced_nn_model.h5')

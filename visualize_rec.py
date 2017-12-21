@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    musList, recList, matchesMapList, songNames = util.parseMatchedInput('javaOutput', range(0,26))
+    musList, recList, matchesMapList, songNames = util.parseMatchedInput('javaOutput/javaOutput', range(0, 20))
     musList, recList = util.normalizeTimes(musList, recList)
     recList, matchesMapList = util.trim(recList, matchesMapList)
     for i in range(len(recList)):

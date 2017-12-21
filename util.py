@@ -91,14 +91,17 @@ def dataAsWindow(musList, recList, matchesMapList, simplified=False, verySimple=
                 if not verySimple: x_obs.append(mus[musIndex]['key'])
                 if not verySimple: x_obs.append(mus[musIndex]['onv'])
                 if k < TIMESTEPS + 1:
-                    if not verySimple: x_obs.append(rec[prevRecIndex]['offset'])
-                    x_obs.append(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'])
+                    #if not verySimple:
+                    x_obs.append(rec[prevRecIndex]['offset'])
+                    #x_obs.append(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'])
+                    x_obs.append(rec[prevRecIndex]['len_offset'])
                     assert(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'] >= 0)
                 prevRecIndex = match[musIndex]
 
             x[obs_index] = np.asarray(x_obs)
             recNote = rec[match[keys[i]]]
-            y[obs_index] = [recNote['offset'], recNote['end_normal'] - recNote['start_normal']]
+            #y[obs_index] = [recNote['offset'], recNote['end_normal'] - recNote['start_normal']]
+            y[obs_index] = [recNote['offset'], recNote['len_offset']]
             assert(rec[match[keys[i]]]['end_normal'] - recNote['start_normal']) >= 0
             obs_index += 1
     assert(len(x) == len(y))
@@ -238,10 +241,10 @@ def splitData(x, core_input_size=5):
     rec_x_train = np.zeros((len(x), TIMESTEPS + 1, 2))
     core_train_features = np.zeros((len(x), core_input_size))
     for i in range(len(x)):
-        # mus start, prev mus start, prev rec start, prev rec length, index
+        # mus start, mus length, prev rec start, prev rec length, in chord
         core_train_features[i][0] = x[i][TIMESTEPS * 6 + 0]
         if core_input_size >= 2:
-            core_train_features[i][1] = x[i][(TIMESTEPS - 1) * 6 + 0]
+            core_train_features[i][1] = x[i][(TIMESTEPS) * 6 + 1]
         if core_input_size >= 3:
             core_train_features[i][2] = x[i][TIMESTEPS * 6 + 4]
         if core_input_size >= 4:
@@ -252,7 +255,6 @@ def splitData(x, core_input_size=5):
         for t in range(len(rec)):
             rec[t][0] = x[i][t * 6 + 4]
             rec[t][1] = x[i][t * 6 + 5]
-            assert(rec[t][1] >= 0)
         mus = np.zeros((2 * TIMESTEPS + 1, 4))
         for t in range(len(mus)):
             for j in range(len(mus[t])):
@@ -319,11 +321,11 @@ def dataAsSequentialForPredict(mus, matches):
     assert(len(songLengths) == len(musList))
     return x, y, songLengths '''
 
-def load_data(core_input_shape=5):
-    musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,20))
+def load_data(core_input_shape=5, n_files=252):
+    musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
     musList, recList = normalizeTimes(musList, recList)
     recList, matchesMapList = trim(recList, matchesMapList)
-    musList, recList = addOffsets(musList, recList, matchesMapList)
+    recList = addOffsets(musList, recList, matchesMapList)
     x, y = dataAsWindow(musList, recList, matchesMapList)
     x_train = x.astype('float32')
     y_train = y.astype('float32')
@@ -356,16 +358,15 @@ def addOffsets(musList, recList, matchesMapList):
     for i in range(len(musList)):
         mus = musList[i]
         rec = recList[i]
-        count = 0
         match = matchesMapList[i]
         keys = sorted(match.keys())
         for mIndex in keys:
             m = mus[mIndex]
             r = rec[match[mIndex]]
             r['offset'] = r['start_normal'] - m['start_normal']
-            #print(r['start_normal'] - m['start_normal'])
-            count += 1
-    return musList, recList
+            r['len_offset'] = (r['end_normal'] - r['start_normal']) - (m['end_normal'] - m['start_normal'])
+            recList[i][match[mIndex]] = r
+    return recList
 
 def convertToStatefulBatched(x_train, y_train):
     x_new_shape = (BATCH_SIZE * (len(x_train) - 1), x_train.shape[1], x_train.shape[2])
@@ -511,7 +512,7 @@ def decodeNote(str):
     return note
 	
 def printNote(note):
-    return "{{{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
+    return "{{{},{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
         note['start'],note['end'],note['track'])
 
 
