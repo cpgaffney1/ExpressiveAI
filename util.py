@@ -107,134 +107,47 @@ def dataAsWindow(musList, recList, matchesMapList, simplified=False, verySimple=
     assert(len(x) == len(y))
     return x, y
 
-'''
-def dataAsWindowForPredict(mus, rec, match, simplified=False, verySimple=False):
-    if verySimple: simplified = True
+def dataAsWindowTwoSided(musList, recList, matchesMapList):
     print('transforming')
-    musNoteIndices = []
-    numObs = len(mus) - (2 * TIMESTEPS + 1) - 1
-    if verySimple:
-        dim = V_SIMPLE_FEATURES
-    elif simplified:
-        dim = SIMPLIFIED_FEATURES
-    else:
-        dim = NON_SPARSE_FEATURES
+    songLengths = [len(mus.keys()) for mus in matchesMapList]
+    numObs = sum(songLengths) - len(matchesMapList) * (2 * TIMESTEPS + 1) - len(matchesMapList)
+    print(numObs)
+    dim = (2 * TIMESTEPS + 1) * 6
     x = np.zeros((numObs, dim))
+    y = np.zeros((numObs, 2))
     obs_index = 0
-    initial_predictions = []
-    for i in range(TIMESTEPS + 1, len(mus) - TIMESTEPS - 1):
-        x_obs = []
-        slice = mus[i - TIMESTEPS : i + TIMESTEPS + 1]
-        for k in range(len(slice)):
-            musIndex = slice[k]['index']
-            if simplified and mus[i]['index'] != musIndex:
-                continue
-            x_obs.append(mus[musIndex]['start_normal'])
-            if not verySimple: x_obs.append(mus[musIndex]['end_normal'] - mus[musIndex]['start_normal'])
-            if not verySimple: x_obs.append(mus[musIndex]['key'])
-            if not verySimple: x_obs.append(mus[musIndex]['onv'])
-            if k < TIMESTEPS + 1:
-                if obs_index == 0:
-                    prevRecIndex = match[slice[k - 1]['index']]
-                    if verySimple:
-                        pair = (rec[prevRecIndex]['end_normal'],)
-                    else:
-                        pair = (rec[prevRecIndex]['start_normal'], rec[prevRecIndex]['end_normal'])
-                    initial_predictions.append(pair)
-                if not verySimple: x_obs.append(-1)
-                x_obs.append(-1)
-        x[obs_index] = np.asarray(x_obs)
-        musNoteIndices.append(mus[i]['index'])
-        obs_index += 1
-    print('done transforming')
-    return x, initial_predictions, musNoteIndices
-'''
+    for song_num in range(len(musList)):
+        print(song_num)
+        # list of mus_start, mus_end, key, onv, rec_start, rec_end for each timestep
+        mus = musList[song_num]
+        rec = recList[song_num]
+        match = matchesMapList[song_num]
+        keys = sorted(match.keys())
+        for i in range(TIMESTEPS + 1, len(keys) - TIMESTEPS - 1):
+            x_obs = []
+            prevRecIndex = match[keys[i - TIMESTEPS - 1]]
+            slice = keys[i - TIMESTEPS - 1: i + TIMESTEPS]
+            for k in range(len(slice)):
+                musIndex = slice[k]
+                x_obs.append(mus[musIndex]['start_normal'])
+                assert(mus[musIndex]['end_normal'] - mus[musIndex]['start_normal'] >= 0)
+                x_obs.append(mus[musIndex]['end_normal'] - mus[musIndex]['start_normal'])
+                x_obs.append(mus[musIndex]['key'])
+                x_obs.append(mus[musIndex]['onv'])
+                x_obs.append(rec[prevRecIndex]['offset'])
+                x_obs.append(rec[prevRecIndex]['len_offset'])
+                assert(rec[prevRecIndex]['end_normal'] - rec[prevRecIndex]['start_normal'] >= 0)
+                prevRecIndex = match[musIndex]
 
-'''
-def dataAsSequential(musList, recList, matchesMapList):
-    print('transforming')
-    print(musList[0][0])
-    xTrainList = []
-    yTrainList = []
-    numObs = 0
-    countWeirdOccurences = 0
-    songLengths = []
-    for i in range(len(musList)):
-        musTrain = []
-        recTrain = []
-        mus = musList[i]
-        rec = recList[i]
-        match = matchesMapList[i]
-        lastStartTime = -1
-        x = None
-        y = None
-        indices = None
-        for musIndex in sorted(match.keys()):
-            musNote = mus[musIndex]
-            recNote = rec[match[musIndex]]
-            if musNote['start_normal'] != lastStartTime:
-                if x is not None and y is not None:
-                    musTrain.append(x)
-                    recTrain.append(y)
-                lastStartTime = musNote['start_normal']
-                x = np.zeros(KEYBOARD * 3 + 1)
-                indices = [-1 for _ in range(KEYBOARD)]
-                y = np.zeros(KEYBOARD)
-            if x[musNote['key']] != 0: countWeirdOccurences += 1
-            assert(musNote['start_normal'] == lastStartTime)
-            x[musNote['key']] = 1
-            indices[musNote['key']] = musNote['index']
-            x[KEYBOARD + musNote['key']] = musNote['onv']
-            x[2 * KEYBOARD + musNote['key']] = musNote['end_normal']
-            x[-1] = lastStartTime
-            assert(recNote['key'] == musNote['key'])
-            y[recNote['key']] = recNote['start_normal']
-        xTrainList.append(musTrain)
-        numObs += len(musTrain) + 1 - TIMESTEPS
-        yTrainList.append(recTrain)
-    print('weird occurences ' + str(countWeirdOccurences))
-    print('num obs ' + str(numObs))
-    x = np.zeros((numObs, TIMESTEPS, KEYBOARD * 3 + 1))
-    y = np.zeros((numObs, KEYBOARD))
-    obsIndex = 0
-    for i in range(len(xTrainList)):
-        songLengths.append(0)
-        musTrain = xTrainList[i]
-        recTrain = yTrainList[i]
-        for j in range(TIMESTEPS - 1, len(musTrain)):
-            songLengths[-1] += 1
-            for k in range(TIMESTEPS):
-                x[obsIndex][k] = musTrain[j - (TIMESTEPS - k) + 1]
-                y[obsIndex] = recTrain[j]
-            obsIndex += 1
-    print('done transforming')
-    assert(len(songLengths) == len(musList))
-    return x, y, songLengths
+            x[obs_index] = np.asarray(x_obs)
+            recNote = rec[match[keys[i]]]
+            #y[obs_index] = [recNote['offset'], recNote['end_normal'] - recNote['start_normal']]
+            y[obs_index] = [recNote['offset'], recNote['len_offset']]
+            assert(rec[match[keys[i]]]['end_normal'] - recNote['start_normal']) >= 0
+            obs_index += 1
+    assert(len(x) == len(y))
+    return x, y
 
-def splitSeqChord(mus_x_train, rec_x_train, core_train_features, y_train, isSeq):
-    isChordIndices = []
-    notChordIndices = []
-    for i in range(len(core_train_features)):
-        if core_train_features[i][0] == core_train_features[i][1]:
-            isChordIndices.append(i)
-        else:
-            notChordIndices.append(i)
-
-    mus_train_seq = mus_x_train[notChordIndices][:][:]
-    rec_train_seq = rec_x_train[notChordIndices][:][:]
-    core_train_seq = core_train_features[notChordIndices][:]
-    y_train_seq = y_train[notChordIndices][:]
-
-    mus_train_chord = mus_x_train[isChordIndices][:][:]
-    rec_train_chord = rec_x_train[isChordIndices][:][:]
-    core_train_chord = core_train_features[isChordIndices][:]
-    y_train_chord = y_train[isChordIndices][:]
-
-    if isSeq:
-        return mus_train_seq, rec_train_seq, core_train_seq, y_train_seq
-    else:
-        return mus_train_chord, rec_train_chord, core_train_chord, y_train_chord
-'''
 def splitData(x, core_input_size=5):
     assert(core_input_size >= 1 and core_input_size <= 5)
     mus_x_train = np.zeros((len(x), 2 * TIMESTEPS + 1, 4))
@@ -264,62 +177,21 @@ def splitData(x, core_input_size=5):
         rec_x_train[i] = rec
     return mus_x_train, rec_x_train, core_train_features
 
-'''
-def dataAsSequentialForPredict(mus, matches):
-    print('transforming')
-    numObs = 0
-    countWeirdOccurences = 0
-    for i in range(len(musList)):
-        musTrain = []
-        recTrain = []
-        mus = musList[i]
-        rec = recList[i]
-        match = matchesMapList[i]
-        lastStartTime = -1
-        x = None
-        y = None
-        indices = None
-        for musIndex in sorted(match.keys()):
-            musNote = mus[musIndex]
-            recNote = rec[match[musIndex]]
-            if musNote['start_normal'] != lastStartTime:
-                if x is not None and y is not None:
-                    musTrain.append(x)
-                    recTrain.append(y)
-                lastStartTime = musNote['start_normal']
-                x = np.zeros(KEYBOARD * 3 + 1)
-                indices = [-1 for _ in range(KEYBOARD)]
-                y = np.zeros(KEYBOARD)
-            if x[musNote['key']] != 0: countWeirdOccurences += 1
-            assert(musNote['start_normal'] == lastStartTime)
-            x[musNote['key']] = 1
-            indices[musNote['key']] = musNote['index']
-            x[KEYBOARD + musNote['key']] = musNote['onv']
-            x[2 * KEYBOARD + musNote['key']] = musNote['end_normal']
-            x[-1] = lastStartTime
-            assert(recNote['key'] == musNote['key'])
-            y[recNote['key']] = recNote['start_normal']
-        xTrainList.append(musTrain)
-        numObs += len(musTrain) + 1 - TIMESTEPS
-        yTrainList.append(recTrain)
-    print('weird occurences ' + str(countWeirdOccurences))
-    print('num obs ' + str(numObs))
-    x = np.zeros((numObs, TIMESTEPS, KEYBOARD * 3 + 1))
-    y = np.zeros((numObs, KEYBOARD))
-    obsIndex = 0
-    for i in range(len(xTrainList)):
-        songLengths.append(0)
-        musTrain = xTrainList[i]
-        recTrain = yTrainList[i]
-        for j in range(TIMESTEPS - 1, len(musTrain)):
-            songLengths[-1] += 1
-            for k in range(TIMESTEPS):
-                x[obsIndex][k] = musTrain[j - (TIMESTEPS - k) + 1]
-                y[obsIndex] = recTrain[j]
-            obsIndex += 1
-    print('done transforming')
-    assert(len(songLengths) == len(musList))
-    return x, y, songLengths '''
+def splitDataTwoSided(x):
+    x_train = np.zeros((len(x), 2 * TIMESTEPS + 1, 6))
+    for i in range(len(x)):
+        rec = np.zeros((TIMESTEPS + 1, 2))
+        for t in range(len(rec)):
+            rec[t][0] = x[i][t * 6 + 4]
+            rec[t][1] = x[i][t * 6 + 5]
+        x_obs = np.zeros((2 * TIMESTEPS + 1, 6))
+        for t in range(len(x_obs.size[0])):
+            for j in range(len(x_obs.size[1])):
+                offset = (t * 6)
+                x_obs[t][j] = x[i][offset + j]
+        x_train[i] = x_obs
+    return x_train
+
 
 def load_data(core_input_shape=5, n_files=252):
     musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
@@ -333,6 +205,18 @@ def load_data(core_input_shape=5, n_files=252):
     mus_x_train, rec_x_train, core_train_features = mus_x_train.astype('float32'), rec_x_train.astype(
         'float32'), core_train_features.astype('float32')
     return mus_x_train, rec_x_train, core_train_features, y_train
+
+def load_data_rnn(n_files=252):
+    musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
+    musList, recList = normalizeTimes(musList, recList)
+    recList, matchesMapList = trim(recList, matchesMapList)
+    recList = addOffsets(musList, recList, matchesMapList)
+    x, y = dataAsWindowTwoSided(musList, recList, matchesMapList)
+    x_train = x.astype('float32')
+    y_train = y.astype('float32')
+    x_train = splitDataTwoSided(x_train)
+    x_train = x_train.astype('float32')
+    return x_train, y_train
 
 def denormalizeTimes(predictions, lastTime):
     for i in range(len(predictions)):
@@ -512,7 +396,7 @@ def decodeNote(str):
     return note
 	
 def printNote(note):
-    return "{{{},{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
+    return "{{{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
         note['start'],note['end'],note['track'])
 
 

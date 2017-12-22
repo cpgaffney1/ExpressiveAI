@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f19d400-7255-469b-adf0-d7bb618a6dfc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enhanced_nn_model.h5" afterPath="$PROJECT_DIR$/enhanced_nn_model.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn_model.h5" afterPath="$PROJECT_DIR$/rnn_model.h5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enhanced_nn.py" afterPath="$PROJECT_DIR$/enhanced_nn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enhanced_nn_predict.py" afterPath="$PROJECT_DIR$/enhanced_nn_predict.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn.py" afterPath="$PROJECT_DIR$/rnn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn_predict.py" afterPath="$PROJECT_DIR$/rnn_predict.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testData0.txt" afterPath="$PROJECT_DIR$/testData0.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util.py" afterPath="$PROJECT_DIR$/util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visualize_rec.py" afterPath="$PROJECT_DIR$/visualize_rec.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="util.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="514" column="34" lean-forward="false" selection-start-line="514" selection-start-column="34" selection-end-line="514" selection-end-column="34" />
+            <state relative-caret-position="328">
+              <caret line="214" column="31" lean-forward="false" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="31" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -58,8 +32,8 @@
       <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="-491">
+              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -67,23 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rnn_predict.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rnn_predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rnn_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="47" column="89" lean-forward="true" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enhanced_nn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+            <state relative-caret-position="-1470">
+              <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -94,8 +56,8 @@
       <file leaf-file-name="enhanced_nn_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="148" column="47" lean-forward="false" selection-start-line="148" selection-start-column="47" selection-end-line="148" selection-end-column="47" />
+            <state relative-caret-position="210">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="148" selection-end-column="49" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -165,11 +127,11 @@
         <option value="$PROJECT_DIR$/javaOutput0.txt" />
         <option value="$PROJECT_DIR$/enhanced_experiment.py" />
         <option value="$PROJECT_DIR$/visualize_rec.py" />
-        <option value="$PROJECT_DIR$/rnn.py" />
-        <option value="$PROJECT_DIR$/rnn_predict.py" />
         <option value="$PROJECT_DIR$/enhanced_nn.py" />
         <option value="$PROJECT_DIR$/enhanced_nn_predict.py" />
         <option value="$PROJECT_DIR$/util.py" />
+        <option value="$PROJECT_DIR$/rnn.py" />
+        <option value="$PROJECT_DIR$/rnn_predict.py" />
       </list>
     </option>
   </component>
@@ -549,14 +511,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1621912" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46432617" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28425822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31823328" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31823328" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25821066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -860,15 +821,15 @@
         <state relative-caret-position="189">
           <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnn_predict.py">
+    <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="47" column="89" lean-forward="true" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="148" selection-end-column="49" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -877,18 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="148" column="47" lean-forward="false" selection-start-line="148" selection-start-column="47" selection-end-line="148" selection-end-column="47" />
+        <state relative-caret-position="-491">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -897,10 +848,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="514" column="34" lean-forward="false" selection-start-line="514" selection-start-column="34" selection-end-line="514" selection-end-column="34" />
+        <state relative-caret-position="328">
+          <caret line="214" column="31" lean-forward="false" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="31" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1470">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
