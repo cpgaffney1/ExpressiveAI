@@ -7,6 +7,7 @@ import numpy as np
 #note that midi has 128 notes, more than the 88 on a keyboard
 KEYBOARD = 128
 TIMESTEPS = 20
+N_FILES = 252
 
 H_LAYER_SIZE = KEYBOARD
 DATA_LEN = 32554
@@ -118,7 +119,7 @@ def dataAsWindowTwoSided(musList, recList, matchesMapList):
     obs_index = 0
     for song_num in range(len(musList)):
         print(song_num)
-        # list of mus_start, mus_end, key, onv, rec_start, rec_end for each timestep
+        # list of mus_start, mus length, key, onv, rec offset, rec len offset for each timestep
         mus = musList[song_num]
         rec = recList[song_num]
         match = matchesMapList[song_num]
@@ -180,10 +181,6 @@ def splitData(x, core_input_size=5):
 def splitDataTwoSided(x):
     x_train = np.zeros((len(x), 2 * TIMESTEPS + 1, 6))
     for i in range(len(x)):
-        rec = np.zeros((TIMESTEPS + 1, 2))
-        for t in range(len(rec)):
-            rec[t][0] = x[i][t * 6 + 4]
-            rec[t][1] = x[i][t * 6 + 5]
         x_obs = np.zeros((2 * TIMESTEPS + 1, 6))
         for t in range(len(x_obs.size[0])):
             for j in range(len(x_obs.size[1])):
@@ -193,7 +190,7 @@ def splitDataTwoSided(x):
     return x_train
 
 
-def load_data(core_input_shape=5, n_files=252):
+def load_data(core_input_shape=5, n_files=N_FILES):
     musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
     musList, recList = normalizeTimes(musList, recList)
     recList, matchesMapList = trim(recList, matchesMapList)
@@ -206,11 +203,12 @@ def load_data(core_input_shape=5, n_files=252):
         'float32'), core_train_features.astype('float32')
     return mus_x_train, rec_x_train, core_train_features, y_train
 
-def load_data_rnn(n_files=252):
+def load_data_rnn(n_files=N_FILES):
+    #enhanced_nn_model = load_model("enhanced_nn_model.h5")
+    #prelimSongPredictions = enhanced_nn_predict.predict(enhanced_nn_model, fromFile='javaOutput/javaOutput', files=range(0,n_files))
     musList, recList, matchesMapList, songNames = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
     musList, recList = normalizeTimes(musList, recList)
-    recList, matchesMapList = trim(recList, matchesMapList)
-    recList = addOffsets(musList, recList, matchesMapList)
+    # dont actually need recList
     x, y = dataAsWindowTwoSided(musList, recList, matchesMapList)
     x_train = x.astype('float32')
     y_train = y.astype('float32')

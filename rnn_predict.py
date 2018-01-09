@@ -6,6 +6,7 @@ from keras.models import load_model
 import matplotlib.pyplot as plt
 import keras.backend as K
 import tensorflow as tf
+import enhanced_nn_predict as standard_predict
 
 BATCH_SIZE = 512
 
@@ -36,18 +37,17 @@ def computeActualFromOffset(originalMusStarts, originalMusLens, predictions):
         computed.append([tup[0] + origStart, tup[1] + origLen])
     return computed
 
-def predict(seq_model):
+def predict(model):
+    enhanced_model = load_model("enhanced_nn_model.h5")
+    prelimSongPredictions = standard_predict.predict(enhanced_model)
     musList, recList, matchesMapList, songNames = util.parseMatchedInput('testData', [0, 1])
-    #matchesMapList = [{i:i for i in range(len(musList[0]))}]
     musList, recList = util.normalizeTimes(musList, recList)
-    recList, matchesMapList = util.trim(recList, matchesMapList)
-    recList = util.addOffsets(musList, recList, matchesMapList)
     for i in range(len(musList)):
-        x, y = util.dataAsWindowTwoSided([musList[i]], [recList[i]], [matchesMapList[i]])
+        x, y = util.dataAsWindowTwoSided([musList[i]], [prelimSongPredictions[i]], [matchesMapList[i]])
         x_test = x.astype('float32')
         x_test = util.splitDataTwoSided(x_test)
         x_test, = x_test.astype('float32')
-        predict_on_song(seq_model, x_test, [musList[i]], [recList[i]], [matchesMapList[i]], i)
+        predict_on_song(model, x_test, [musList[i]], [prelimSongPredictions[i]], [matchesMapList[i]], i)
 
 #note the last three args are assumed to be lists containing one element - the song we are currently
 # predicting on. idk what happens if we try to predict on two songs at once
@@ -57,49 +57,36 @@ def predict_on_song(model, x_test, musList, recList, matchesMapList, songIndex):
         new[0] = arr
         return new
 
-    def to2d(arr):
-        new = np.zeros((1, arr.shape[0]))
-        new[0] = arr
-        return new
-
     predictions = []
     originalMusStarts = []
     originalMusLens = []
     notePredictions = []
 
     for i in range(util.TIMESTEPS + 1):
-        predictions.append(rec_x_test[0][i])
+        predictions.append(x_test[0][i])
         notePredictions.append({
-            'key': mus_x_test[0][i][2],
-            'index':i, 'onv': mus_x_test[0][i][3],
+            'key': x_test[0][i][2],
+            'index':i, 'onv': x_test[0][i][3],
             'offv':0, 'track':1,
-            'offset': rec_x_test[0][i][0], 'len_offset':rec_x_test[0][i][1]
+            'offset': x_test[0][i][4], 'len_offset':x_test[0][i][5]
         })
-        originalMusStarts.append(mus_x_test[0][i][0])
-        originalMusLens.append(mus_x_test[0][i][1])
+        originalMusStarts.append(x_test[0][i][0])
+        originalMusLens.append(x_test[0][i][1])
 
-    for i in range(len(rec_x_test)):
-        prev_predictions = to3d(rec_x_test[i])
+    for i in range(len(x_test)):
+        prev_predictions = to3d(x_test[i])
         for j in range(util.TIMESTEPS + 1):
             prev_predictions[0][j] = predictions[-(util.TIMESTEPS+1) + j]
-        # 0,1,2,3 is mus start, prev mus start, prev rec start, prev rec length, in chord
-        originalMusStarts.append(core_test_features[i][0])
-        originalMusLens.append(core_test_features[i][1])
-        if core_input_shape >= 3:
-            core_test_features[i][2] = predictions[-1][0]
-        if core_input_shape >= 4:
-            core_test_features[i][3] = predictions[-1][1]
-        #print(to3d(mus_x_test[i]))
-        #print(prev_predictions)
-        pred = model.predict_on_batch([to3d(mus_x_test[i]), prev_predictions])
+        originalMusStarts.append(x_test[util.TIMESTEPS][0])
+        originalMusLens.append(x_test[util.TIMESTEPS][1])
+        pred = model.predict_on_batch([to3d(x_test[i])])
         predictions.append(pred[0])
         notePredictions.append({
-            'key': mus_x_test[i][util.TIMESTEPS][2],
-            'index': i + util.TIMESTEPS, 'onv': mus_x_test[i][util.TIMESTEPS][3],
+            'key': x_test[i][util.TIMESTEPS][2],
+            'index': i + util.TIMESTEPS, 'onv': x_test[i][util.TIMESTEPS][3],
             'offv': 0, 'track': 1,
             'offset': pred[0][0], 'len_offset': pred[0][1]
         })
-        #print(pred[0])
 
     print(predictions)
     actual = []
@@ -145,5 +132,13 @@ def predict_on_song(model, x_test, musList, recList, matchesMapList, songIndex):
         for note in notePredictions:
             of.write(util.printNote(note) + '\n')
 
-model = load_model("rnn_model.h5")
-predict(model)
+def main():
+    model = load_model("rnn_model.h5")
+    predict(model)
+
+
+# This if statement passes if this
+# was the file that was executed
+if __name__ == '__main__':
+    main()
+

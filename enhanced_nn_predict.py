@@ -35,21 +35,22 @@ def computeActualFromOffset(originalMusStarts, originalMusLens, predictions):
         computed.append([tup[0] + origStart, tup[1] + origLen])
     return computed
 
-def predict(seq_model, core_input_shape=5, withOffset=False):
-    musList, recList, matchesMapList, songNames = util.parseMatchedInput('testData', [0, 1])
-    #matchesMapList = [{i:i for i in range(len(musList[0]))}]
+def predict(seq_model, core_input_shape=5, withOffset=False, fromFile='testData', files=[0,1]):
+    musList, recList, matchesMapList, songNames = util.parseMatchedInput(fromFile, files)
     musList, recList = util.normalizeTimes(musList, recList)
     recList, matchesMapList = util.trim(recList, matchesMapList)
     if withOffset:
         recList = util.addOffsets(musList, recList, matchesMapList)
+    songPredictions = []
     for i in range(len(musList)):
         x, y = util.dataAsWindow([musList[i]], [recList[i]], [matchesMapList[i]])
         x_test = x.astype('float32')
         mus_x_test, rec_x_test, core_test_features = util.splitData(x_test)
         mus_x_test, rec_x_test, core_test_features = mus_x_test.astype('float32'), rec_x_test.astype(
             'float32'), core_test_features.astype('float32')
-        predict_on_song(seq_model, core_input_shape, mus_x_test, rec_x_test, core_test_features,
-                        [musList[i]], [recList[i]], [matchesMapList[i]], i)
+        songPredictions.append(predict_on_song(seq_model, core_input_shape, mus_x_test, rec_x_test, core_test_features,
+                        [musList[i]], [recList[i]], [matchesMapList[i]], i))
+    return songPredictions
 
 #note the last three args are assumed to be lists containing one element - the song we are currently
 # predicting on. idk what happens if we try to predict on two songs at once
@@ -140,13 +141,10 @@ def predict_on_song(model, core_input_shape, mus_x_test, rec_x_test, core_test_f
     #print('lengths: rec_x_test = {}, predictions = {}, mus = {}'.format(len(rec_x_test), len(predictions), len(musList[0])))
     file = "C://Users//cpgaffney1//Documents//NetBeansProjects//ProjectMusic//files//predictions" + str(songIndex) + ".txt"
     with open(file, 'w') as of:
-        '''for i in range(len(predictions) - 1):
-            if i >= util.TIMESTEPS:
-                of.write("{},{},{}\n".format(i, predictions[i+1][0], predictions[i+1][1]))
-            else:
-                of.write("{},{},{}\n".format(i, predictions[i][0], predictions[i][1]))'''
         for note in notePredictions:
             of.write(util.printNote(note) + '\n')
+
+    return notePredictions
 
 
 

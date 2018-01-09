@@ -1,7 +1,6 @@
 import util
 import matplotlib.pyplot as plt
 
-
 def main():
     musList, recList, matchesMapList, songNames = util.parseMatchedInput('javaOutput/javaOutput', range(0, 20))
     musList, recList = util.normalizeTimes(musList, recList)

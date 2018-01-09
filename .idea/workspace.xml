@@ -2,10 +2,267 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f19d400-7255-469b-adf0-d7bb618a6dfc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn.py" afterPath="$PROJECT_DIR$/rnn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn_predict.py" afterPath="$PROJECT_DIR$/rnn_predict.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util.py" afterPath="$PROJECT_DIR$/util.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/Music.iml" afterPath="$PROJECT_DIR$/.idea/Music.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/enhanced_nn_predict.py" afterPath="$PROJECT_DIR$/enhanced_nn_predict.py" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput100.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput100.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput101.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput101.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput102.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput102.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput103.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput103.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput104.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput104.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput105.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput105.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput106.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput106.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput107.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput107.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput108.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput108.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput109.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput109.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput110.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput110.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput111.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput111.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput112.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput112.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput113.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput113.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput114.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput114.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput115.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput115.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput116.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput116.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput117.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput117.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput118.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput118.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput119.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput119.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput120.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput120.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput121.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput121.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput122.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput122.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput123.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput123.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput124.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput124.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput125.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput125.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput126.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput126.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput127.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput127.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput128.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput128.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput129.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput129.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput130.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput130.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput131.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput131.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput132.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput132.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput133.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput133.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput134.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput134.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput135.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput135.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput136.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput136.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput137.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput137.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput138.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput138.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput139.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput139.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput140.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput140.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput141.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput141.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput142.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput142.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput143.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput143.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput144.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput144.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput145.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput145.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput146.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput146.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput147.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput147.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput148.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput148.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput149.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput149.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput150.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput150.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput151.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput151.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput152.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput152.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput153.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput153.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput154.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput154.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput155.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput155.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput156.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput156.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput157.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput157.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput158.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput158.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput159.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput159.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput160.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput160.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput161.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput161.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput162.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput162.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput163.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput163.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput164.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput164.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput165.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput165.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput166.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput166.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput167.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput167.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput168.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput168.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput169.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput169.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput170.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput170.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput171.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput171.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput172.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput172.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput173.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput173.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput174.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput174.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput175.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput175.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput176.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput176.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput177.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput177.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput178.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput178.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput179.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput179.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput180.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput180.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput181.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput181.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput182.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput182.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput183.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput183.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput184.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput184.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput185.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput185.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput186.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput186.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput187.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput187.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput188.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput188.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput189.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput189.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput190.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput190.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput191.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput191.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput192.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput192.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput193.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput193.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput194.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput194.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput195.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput195.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput196.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput196.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput197.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput197.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput198.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput198.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput199.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput199.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput20.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput20.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput200.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput200.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput201.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput201.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput202.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput202.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput203.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput203.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput204.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput204.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput205.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput205.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput206.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput206.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput207.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput207.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput208.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput208.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput209.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput209.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput21.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput21.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput210.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput210.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput211.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput211.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput212.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput212.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput213.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput213.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput214.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput214.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput215.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput215.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput216.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput216.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput217.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput217.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput218.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput218.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput219.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput219.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput22.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput22.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput220.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput220.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput221.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput221.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput222.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput222.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput223.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput223.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput224.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput224.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput225.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput225.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput226.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput226.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput227.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput227.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput228.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput228.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput229.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput229.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput23.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput23.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput230.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput230.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput231.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput231.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput232.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput232.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput233.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput233.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput234.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput234.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput235.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput235.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput236.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput236.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput237.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput237.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput238.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput238.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput239.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput239.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput24.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput24.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput240.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput240.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput241.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput241.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput242.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput242.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput243.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput243.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput244.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput244.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput245.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput245.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput246.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput246.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput247.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput247.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput248.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput248.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput249.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput249.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput25.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput25.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput250.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput250.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput251.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput251.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput26.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput26.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput27.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput27.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput28.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput28.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput29.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput29.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput30.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput30.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput31.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput31.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput32.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput32.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput33.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput33.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput34.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput34.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput35.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput35.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput36.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput36.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput37.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput37.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput38.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput38.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput39.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput39.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput40.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput40.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput41.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput41.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput42.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput42.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput43.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput43.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput44.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput44.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput45.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput45.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput46.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput46.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput47.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput47.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput48.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput48.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput49.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput49.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput50.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput50.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput51.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput51.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput52.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput52.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput53.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput53.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput54.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput54.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput55.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput55.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput56.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput56.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput57.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput57.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput58.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput58.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput59.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput59.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput60.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput60.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput61.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput61.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput62.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput62.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput63.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput63.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput64.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput64.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput65.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput65.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput66.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput66.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput67.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput67.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput68.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput68.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput69.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput69.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput70.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput70.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput71.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput71.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput72.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput72.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput73.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput73.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput74.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput74.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput75.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput75.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput76.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput76.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput77.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput77.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput78.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput78.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput79.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput79.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput80.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput80.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput81.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput81.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput82.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput82.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput83.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput83.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput84.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput84.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput85.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput85.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput86.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput86.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput87.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput87.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput88.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput88.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput89.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput89.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput90.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput90.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput91.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput91.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput92.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput92.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput93.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput93.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput94.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput94.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput95.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput95.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput96.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput96.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput97.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput97.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput98.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput98.txt" />
+      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput99.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput99.txt" />
+      <change beforePath="$PROJECT_DIR$/rnn.py" afterPath="$PROJECT_DIR$/rnn.py" />
+      <change beforePath="$PROJECT_DIR$/rnn_predict.py" afterPath="$PROJECT_DIR$/rnn_predict.py" />
+      <change beforePath="$PROJECT_DIR$/testData0.txt" afterPath="$PROJECT_DIR$/testData0.txt" />
+      <change beforePath="$PROJECT_DIR$/util.py" afterPath="$PROJECT_DIR$/util.py" />
+      <change beforePath="$PROJECT_DIR$/visualize_rec.py" afterPath="$PROJECT_DIR$/visualize_rec.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,14 +271,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="214" column="31" lean-forward="false" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="31" />
+            <state relative-caret-position="-7273">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -29,11 +285,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-491">
-              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="462">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -41,14 +297,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rnn_predict.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rnn_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rnn_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1470">
-              <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="84">
+              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +310,8 @@
       <file leaf-file-name="enhanced_nn_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="148" selection-end-column="49" />
+            <state relative-caret-position="21">
+              <caret line="38" column="88" lean-forward="false" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -68,8 +322,18 @@
       <file leaf-file-name="visualize_rec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/visualize_rec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="21">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enhanced_nn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -126,12 +390,12 @@
         <option value="$PROJECT_DIR$/conv_predict.py" />
         <option value="$PROJECT_DIR$/javaOutput0.txt" />
         <option value="$PROJECT_DIR$/enhanced_experiment.py" />
-        <option value="$PROJECT_DIR$/visualize_rec.py" />
         <option value="$PROJECT_DIR$/enhanced_nn.py" />
+        <option value="$PROJECT_DIR$/visualize_rec.py" />
+        <option value="$PROJECT_DIR$/rnn_predict.py" />
         <option value="$PROJECT_DIR$/enhanced_nn_predict.py" />
         <option value="$PROJECT_DIR$/util.py" />
         <option value="$PROJECT_DIR$/rnn.py" />
-        <option value="$PROJECT_DIR$/rnn_predict.py" />
       </list>
     </option>
   </component>
@@ -157,50 +421,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaOutput" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="good_models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ExpressiveAI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExpressiveAI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExpressiveAI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExpressiveAI" type="462c0819:PsiDirectoryNode" />
+              <item name="javaOutput" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +466,187 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.enhanced_predict">
+  <component name="RunManager" selected="Python.rnn">
+    <configuration name="conv" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="C:\Users\cpgaffney1\PycharmProjects\Music\simple_nn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="conv_predict" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="C:\Users\cpgaffney1\PycharmProjects\Music\nn_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="enhanced" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn.py" />
+      <option name="PARAMETERS" value="-n" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="enhanced_predict" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="ml" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="rnn" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\Anaconda3\envs\untitled\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="rnn_predict" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="two_models" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="very_simple" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/very_simple_nn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="visualize_rec" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_rec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,187 +710,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="rnn" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="rnn_predict" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn_predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="conv" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="C:\Users\cpgaffney1\PycharmProjects\Music\simple_nn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="conv_predict" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="C:\Users\cpgaffney1\PycharmProjects\Music\nn_predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ml" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="very_simple" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/very_simple_nn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="enhanced_predict" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn_predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="visualize_rec" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_rec.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="two_models" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_experiment.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="enhanced" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaffney1\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn.py" />
-      <option name="PARAMETERS" value="-n" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
     <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Python.rnn" />
@@ -489,6 +726,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -510,19 +750,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1621912" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16197917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46432617" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28425822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31823328" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172338" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25821066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -530,6 +770,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2797282" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -702,27 +943,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/tensor_shape.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="925" column="0" lean-forward="false" selection-start-line="925" selection-start-column="0" selection-end-line="925" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/op_def_library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="545" column="0" lean-forward="false" selection-start-line="545" selection-start-column="0" selection-end-line="545" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/tensor_shape.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/ops.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/op_def_library.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/engine/training.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -808,58 +1031,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_rec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="148" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="214" column="31" lean-forward="false" selection-start-line="214" selection-start-column="31" selection-end-line="214" selection-end-column="31" />
+        <state relative-caret-position="-7273">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="38" column="88" lean-forward="false" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rnn_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1470">
-          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        <state relative-caret-position="84">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize_rec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
