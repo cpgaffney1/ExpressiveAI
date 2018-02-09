@@ -34,8 +34,9 @@ def computeActualFromOffset(originalMusStarts, originalMusLens, predictions):
         computed.append([tup[0] + origStart, tup[1] + origLen])
     return computed
 
-def predict(seq_model, core_input_shape=5, withOffset=False, fromFile='testData', files=[0,1]):
-    musList, recList, matchesMapList, songNames = util.parseMatchedInput(fromFile, files)
+def predict(seq_model, core_input_shape=5, withOffset=False, fromFile='testData', files=[0]):
+    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = util.parseMatchedInput(
+        fromFile, files)
     musList, recList = util.normalizeTimes(musList, recList)
     recList, matchesMapList = util.trim(recList, matchesMapList)
     if withOffset:
@@ -138,7 +139,7 @@ def predict_on_song(model, core_input_shape, mus_x_test, rec_x_test, core_test_f
         notePredictions[i]['end'] = predictions[i][0] + predictions[i][1]
 
     #print('lengths: rec_x_test = {}, predictions = {}, mus = {}'.format(len(rec_x_test), len(predictions), len(musList[0])))
-    file = "C://Users//cpgaffney1//Documents//NetBeansProjects//ProjectMusic//files//predictions" + str(songIndex) + ".txt"
+    file = "C://Users//cpgaf//OneDrive//Documents//NetBeansProjects//Expressive//files//predictions" + str(songIndex) + ".txt"
     with open(file, 'w') as of:
         for note in notePredictions:
             of.write(util.printNote(note) + '\n')

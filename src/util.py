@@ -22,7 +22,6 @@ NON_SPARSE_FEATURES = (TIMESTEPS + 1) * 6 + TIMESTEPS * 4
 SIMPLIFIED_FEATURES = 6
 V_SIMPLE_FEATURES = 2
 
-
 def trim(recList, matchesMapList):
     for i in range(len(recList)):
         window_length = 5
@@ -390,7 +389,7 @@ def predict_matches_for_indices_ml(x, x_raw, predictor_model, indices, used_rec_
     return (musIndex, recIndex)
 
 def load_data(core_input_shape=5, n_files=N_FILES):
-    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
+    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('../javaOutput/javaOutput', range(0,n_files))
     musList, recList = normalizeTimes(musList, recList)
     recList, matchesMapList = trim(recList, matchesMapList)
     recList = addOffsets(musList, recList, matchesMapList)
@@ -414,7 +413,7 @@ def weight_experiment(n_files = N_FILES):
         weights = tuple([w * s / sum(weights) for w in weights])
         start = time.time()
         print("Trying weight: {}".format(weights))
-        musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('javaOutput/javaOutput', range(0, n_files), activeWeights=weights)
+        musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('../javaOutput/javaOutput', range(0, n_files), activeWeights=weights)
         if matchValue < bestValue:
             bestValue = matchValue
             bestWeights = weights
@@ -430,7 +429,7 @@ def weight_experiment(n_files = N_FILES):
 def load_data_rnn(n_files=N_FILES):
     #enhanced_nn_model = load_model("enhanced_nn_model.h5")
     #prelimSongPredictions = enhanced_nn_predict.predict(enhanced_nn_model, fromFile='javaOutput/javaOutput', files=range(0,n_files))
-    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('javaOutput/javaOutput', range(0,n_files))
+    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('../javaOutput/javaOutput', range(0,n_files))
     musList, recList = normalizeTimes(musList, recList)
     recList, matchesMapList = trim(recList, matchesMapList)
     recList = addOffsets(musList, recList, matchesMapList)
@@ -700,8 +699,10 @@ def decodeNote(str):
     return note
 	
 def printNote(note):
-    return "{{{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
+    str = "{{{},{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
         note['start'],note['end'],note['track'])
+    print(str)
+    return str
 
 
 
@@ -791,6 +792,12 @@ def findRecPair(matches, recNote):
     for m in matches:
         if m[1] == recNote:
             return m
+
+def tsloop_end(i, n, timesteps=TIMESTEPS):
+    return min(n, i + timesteps)
+
+def tsloop_start(i, timesteps=TIMESTEPS):
+    return max(0, i - timesteps)
 
 ############################################################
 # Abstract interfaces for search problems and search algorithms.

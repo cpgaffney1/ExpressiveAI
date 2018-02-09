@@ -4,7 +4,7 @@ from keras.models import Model
 from keras.layers import Dense, Input
 import keras.layers as layers
 import keras.regularizers as reg
-import enhanced_nn_predict as predict
+from src import enhanced_nn_predict as predict
 from keras.initializers import TruncatedNormal
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping
 import keras.backend as K
@@ -84,7 +84,7 @@ def run(mus_x_train, rec_x_train, core_train_features, y_train):
     early_stopping = EarlyStopping(monitor='val_loss', patience=3)
     N_EPOCHS = 1000
     history = model.fit([mus_x_train, rec_x_train], [y_train], validation_split=0.1,
-              batch_size=BATCH_SIZE, epochs=N_EPOCHS, callbacks=[early_stopping], shuffle=False)
+              batch_size=BATCH_SIZE, epochs=N_EPOCHS, callbacks=[early_stopping], shuffle=True)
     #print(model.get_layer("output").get_weights())
 
     model.save('enhanced_nn_model.h5')
