@@ -182,7 +182,7 @@ def splitData(x, core_input_size=5):
         rec_x_train[i] = rec
     return mus_x_train, rec_x_train, core_train_features
 
-def splitDataTwoSided(x, only_mus=False):
+def splitDataTwoSided(x, only_mus=True):
     if only_mus:
         n_step_features = 4
     else:
@@ -194,6 +194,8 @@ def splitDataTwoSided(x, only_mus=False):
             for j in range((x_obs.shape[1])):
                 offset = (t * 6)
                 x_obs[t][j] = x[i][offset + j]
+                if not only_mus and t > TIMESTEPS and j >= 4:
+                    x_obs[t][j] = 0
         x_train[i] = x_obs
     return x_train
 
@@ -425,76 +427,15 @@ def weight_experiment(n_files = N_FILES):
     print("Min weights:")
     print(bestWeights)
     exit()
+'''
+def denormalizeSongTimes(songList):
+    for i in range(len(songList)):
+        lastTime = songList[i][-1]['end']
+        for j in range(len(songList[i])):
+            songList[i][j]['start'] = int(songList[i][j]['start_normal'] * (lastTime / 100.0))
+            songList[i][j]['end'] = int(songList[i][j]['end_normal'] * (lastTime / 100.0))
+    return songList'''
 
-def load_data_rnn(n_files=N_FILES):
-    #enhanced_nn_model = load_model("enhanced_nn_model.h5")
-    #prelimSongPredictions = enhanced_nn_predict.predict(enhanced_nn_model, fromFile='javaOutput/javaOutput', files=range(0,n_files))
-    musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('../javaOutput/javaOutput', range(0,n_files))
-    musList, recList = normalizeTimes(musList, recList)
-    recList, matchesMapList = trim(recList, matchesMapList)
-    recList = addOffsets(musList, recList, matchesMapList)
-    x, y = dataAsWindowTwoSided(musList, recList, matchesMapList)
-    x_train = x.astype('float32')
-    y_train = y.astype('float32')
-    x_train = splitDataTwoSided(x_train, only_mus=True)
-    x_train = x_train.astype('float32')
-    return x_train, y_train
-
-
-
-def denormalizeTimes(predictions, lastTime):
-    for i in range(len(predictions)):
-        for j in range(len(predictions[0])):
-            predictions[i][j] *= (lastTime / 100.0)
-    return predictions
-
-# sets starting and ending times to be percentage of total song length
-def normalizeTimes(musList, recList):
-    for i in range(len(musList)):
-        lastTime = float(musList[i][-1]['start'])
-        for note in musList[i]:
-            note['start_normal'] = (note['start'] * 100) / lastTime
-            note['end_normal'] = (note['end'] * 100) / lastTime
-    for i in range(len(recList)):
-        lastTime = float(recList[i][-1]['start'])
-        for note in recList[i]:
-            note['start_normal'] = (note['start'] * 100) / lastTime
-            note['end_normal'] = (note['end'] * 100) / lastTime
-    return musList, recList
-
-def normalizeIndices(musList, recList):
-    for i in range(len(musList)):
-        lastIndex = float(musList[i][-1]['index'])
-        for note in musList[i]:
-            note['index_normal'] = (note['index'] * 100) / lastIndex
-    for i in range(len(recList)):
-        lastIndex = float(recList[i][-1]['index'])
-        for note in recList[i]:
-            note['index_normal'] = (note['index'] * 100) / lastIndex
-    return musList, recList
-
-def denormalizeIndices(indices, lastIndex):
-    for i in range(len(indices)):
-        indices[i] *= (lastIndex / 100.0)
-        indices[i] = int(indices[i])
-    return indices
-
-def denormalizeIndex(index, lastIndex):
-    return int(index * lastIndex / 100.0)
-
-def addOffsets(musList, recList, matchesMapList):
-    for i in range(len(musList)):
-        mus = musList[i]
-        rec = recList[i]
-        match = matchesMapList[i]
-        keys = sorted(match.keys())
-        for mIndex in keys:
-            m = mus[mIndex]
-            r = rec[match[mIndex]]
-            r['offset'] = r['start_normal'] - m['start_normal']
-            r['len_offset'] = (r['end_normal'] - r['start_normal']) - (m['end_normal'] - m['start_normal'])
-            recList[i][match[mIndex]] = r
-    return recList
 
 def convertToStatefulBatched(x_train, y_train):
     x_new_shape = (BATCH_SIZE * (len(x_train) - 1), x_train.shape[1], x_train.shape[2])
@@ -680,29 +621,7 @@ def parseMatchedInputFromFile(filename, activeWeights):
     assert(len(musList) == len(recList))
     return musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList
 
-def decodeNote(str):
-    end = str.find("}")
-    if end == -1:
-        end = len(str)
-    str = str[str.find("{") + 1 : end]
-    note = {}
-    arr = str.split(',')
-    note['key'] = int(arr[0])
-    note['index'] = int(arr[1])
-    note['onv'] = int(arr[2])
-    note['offv'] = int(arr[3])
-    note['start'] = int(arr[4])
-    note['end'] = int(arr[5])
-    if note['end'] < 0 or note['start'] < 0:
-        print(arr)
-    note['track'] = int(arr[6])
-    return note
-	
-def printNote(note):
-    str = "{{{},{},{},{},{},{},{}}}".format(note['key'], note['index'],note['onv'],note['offv'],
-        note['start'],note['end'],note['track'])
-    print(str)
-    return str
+
 
 
 

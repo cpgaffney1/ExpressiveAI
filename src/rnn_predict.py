@@ -7,23 +7,6 @@ import tensorflow as tf
 
 BATCH_SIZE = 512
 
-difference_mat = np.zeros((BATCH_SIZE * 2 - 1, BATCH_SIZE * 2))
-for i in range(difference_mat.shape[0]):
-    for j in range(difference_mat.shape[1]):
-        if i == j:
-            difference_mat[i][j] = -1
-        if i + 1 == j:
-            difference_mat[i][j] = 1
-print(difference_mat)
-
-def custom_loss(y_true, y_pred):
-    reg_weight = 0.01
-    square_mat = K.dot(y_pred, K.transpose(y_pred))
-    y_flat = y_pred[:,0:1]
-    difference_mat_var = K.variable(difference_mat)
-    difference_mat_var = tf.slice(difference_mat_var, [0, 0], K.shape(square_mat))
-    difference_mat_var = difference_mat_var[:-1,:]
-    return K.mean(K.square(y_pred - y_true), axis=-1) + reg_weight * K.mean(K.square(tf.matmul(difference_mat_var, y_flat)))
 
 def computeActualFromOffset(originalMusStarts, originalMusLens, predictions):
     computed = []
