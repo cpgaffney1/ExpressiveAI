@@ -4,6 +4,9 @@ def denormalizeTimes(predictions, lastTime):
             predictions[i][j] *= (lastTime / 100.0)
     return predictions
 
+def denormalizeTimeFromOffsetSubtract(offset_norm, original, last_mus, last_rec):
+    return offset_norm * last_rec / 100.0 + original * last_rec / last_mus
+
 # sets starting and ending times to be percentage of total song length
 def normalizeTimes(musList, recList):
     for i in range(len(musList)):
@@ -16,8 +19,8 @@ def normalizeTimes(musList, recList):
         for note in recList[i]:
             note['start_normal'] = (note['start'] * 100.0) / lastTime
             note['end_normal'] = (note['end'] * 100.0) / lastTime
-            note['offset_normal'] = (note['offset'] * 100.0) / lastTime
-            note['len_offset_normal'] = (note['len_offset'] * 100.0) / lastTime
+            #note['offset_normal'] = (note['offset'] * 100.0) / lastTime
+            #note['len_offset_normal'] = (note['len_offset'] * 100.0) / lastTime
     return musList, recList
 
 def normalizeIndices(musList, recList):
@@ -49,6 +52,8 @@ def addOffsets(musList, recList):
             r = rec[j]
             r['offset'] = r['start'] - m['start']
             r['len_offset'] = (r['end'] - r['start']) - (m['end'] - m['start'])
+            r['offset_normal'] = r['start_normal'] - m['start_normal']
+            r['len_offset_normal'] = (r['end_normal'] - r['start_normal']) - (m['end_normal'] - m['start_normal'])
             recList[i][j] = r
     return recList
 

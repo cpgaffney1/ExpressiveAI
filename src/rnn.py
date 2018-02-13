@@ -2,93 +2,138 @@ from src import rnn_util as util
 from src import note_util as note
 import tensorflow as tf
 from keras.models import Sequential
-from keras.layers import LSTM, Dense, Dropout, Lambda
+from keras.layers import LSTM, Dense, Dropout, Lambda, Flatten
 from keras.callbacks import EarlyStopping
 from keras.layers import Bidirectional
 import keras.regularizers as reg
 import numpy as np
+from keras.initializers import TruncatedNormal, glorot_uniform
+from keras import optimizers
 import keras.backend as K
 from keras.models import load_model
 import os, random, time, datetime
 from threading import Thread
-BATCH_SIZE = 256
+BATCH_SIZE = 128
 
+def subset(x, y):
+    return x[y[:, 2] != 1], y[y[:, 2] != 1]
 
-def train():
+def custom_loss(y_true, y_pred):
+    penalty_weight = 0.01
+    error = K.mean(K.square(y_pred[:, :2] - y_true[:, :2]), axis=-1)
+    penalty = K.mean(K.square(y_true[:, 2] * (y_pred[:, :2] - y_true[:, :2])), axis=-1)
+    return error# + penalty_weight * penalty
+
+def train(load=False, bidirectional=False):
     n_step_features = 6
     reg_weight = 0.00
-    model = Sequential()
-    model.add(Bidirectional(LSTM(32, return_sequences=True, activation='relu', kernel_regularizer=reg.l2(reg_weight)),
-                            input_shape=(util.TIMESTEPS * 2 + 1, n_step_features)))
-    model.add(Dropout(0.6))
-    model.add(Bidirectional(LSTM(32, return_sequences=False, activation='relu', kernel_regularizer=reg.l2(reg_weight))))
-    model.add(Dropout(0.6))
-    model.add(Dense(2, activation='linear', kernel_regularizer=reg.l2(reg_weight)))
+    if load:
+        if not bidirectional:
+            model = load_model("rnn_model.h5")
+        else:
+            model = load_model("birnn_model.h5")
+    else:
+        model = Sequential()
+        init = glorot_uniform(seed=time.time())
+        if not bidirectional:
+            model.add(LSTM(32, return_sequences=True, activation='relu', kernel_regularizer=reg.l2(reg_weight),
+                       kernel_initializer=init, input_shape=(util.TIMESTEPS + 1, n_step_features)))
+            model.add(LSTM(32, return_sequences=False, activation='relu', kernel_regularizer=reg.l2(reg_weight),
+                       kernel_initializer=init))
+        else:
+            model.add(
+                Bidirectional(LSTM(32, return_sequences=False, activation='relu', kernel_regularizer=reg.l2(reg_weight),
+                       kernel_initializer=init)))
+            model.add(
+                Bidirectional(LSTM(32, return_sequences=False, activation='relu', kernel_regularizer=reg.l2(reg_weight),
+                               kernel_initializer=init)))
 
-    model.compile(loss='mean_squared_error', optimizer='adam', metrics=[])
-    early_stopping = EarlyStopping(monitor='val_loss', patience=5)
+        model.add(Dense(3, activation='linear', kernel_regularizer=reg.l2(reg_weight), kernel_initializer=init))
 
-    N_EPOCHS = 50
+        adam = optimizers.Adam(clipnorm=0.25)
+        model.compile(loss='mean_squared_error', optimizer=adam, metrics=[])
+        early_stopping = EarlyStopping(monitor='val_loss', patience=5)
+
+    N_EPOCHS = 100
+    get_subset = True
     n_files = len(os.listdir(os.getcwd() + '/mus'))
     sample_size = 200
+    for_predict = False
     #load initial data
-    x, y = util.load_data(files=random.sample(range(n_files), sample_size), for_predict=False)
+    x, y = util.load_data(files=random.sample(range(n_files), sample_size), for_predict=for_predict, bidirectional=bidirectional)
     start = datetime.datetime.now()
     for t in range(N_EPOCHS):
+        print("Iteration {}".format(t))
+        if get_subset:
+            x, y = subset(x, y)
         if (datetime.datetime.now() - start) > datetime.timedelta(hours=8):
             exit(8)
-        thread = Thread(target=util.load_data, args=(random.sample(range(n_files), sample_size), False))
+        thread = Thread(target=util.load_data, args=(random.sample(range(n_files), sample_size), for_predict, bidirectional))
         thread.start()
         model.fit(x, y, validation_split=0.1,
-                        batch_size=BATCH_SIZE, epochs=1, callbacks=[], shuffle=True)
-        model.save('rnn_model.h5')
+                        batch_size=BATCH_SIZE, epochs=2, callbacks=[], shuffle=True)
+        if not bidirectional:
+            model.save('rnn_model.h5')
+        else:
+            model.save('birnn_model.h5')
         thread.join()
+        assert(not np.array_equal(x, util.x_global))
+        assert (not np.array_equal(y, util.y_global))
         x, y = util.x_global.copy(), util.y_global.copy()
 
     return model
 
-# uses only mus information to predict
 def predict(model):
     musList, musNames, recList, recNames = util.loadSongLists(for_predict=True)
-    x_test, y_test = util.collectData(musList, recList)
-    predictions = np.zeros((x_test.shape[0] + util.TIMESTEPS, 2))
-    predictions[:util.TIMESTEPS * 2 + 1] = x_test[0, :, 4:]
-    for i in range(len(x_test)):
-        #second half must be all zeros
-        input = np.zeros((1, x_test.shape[1], x_test.shape[2]))
-        input[0] = x_test[i]
-        input[0, :util.TIMESTEPS + 1, 4:] = predictions[i : i + util.TIMESTEPS + 1, :]
-        prediction = model.predict_on_batch(input)
-        predictions[i + util.TIMESTEPS] = prediction
+    for s in range(len(musList)):
+        x_test, y_test = util.collectData([musList[s]], [recList[s]])
+        predictions = np.zeros((x_test.shape[0] + util.TIMESTEPS, 3))
+        predictions[:util.TIMESTEPS + 1, :2] = x_test[0, :, 4:]
+        for i in range(len(x_test)):
+            # second half must be all zeros
+            input = np.zeros((1, x_test.shape[1], x_test.shape[2]))
+            input[0] = x_test[i]
+            input[0, :util.TIMESTEPS + 1, 4:] = predictions[i: i + util.TIMESTEPS + 1, :2]
+            prediction = model.predict_on_batch(input)
+            predictions[i + util.TIMESTEPS] = prediction
 
-    predictions[util.TIMESTEPS:] = model.predict(x_test)
-    print('Mean loss: {}'.format(np.mean(np.abs(y_test - predictions[util.TIMESTEPS:]))))
-    print(predictions[:5])
-    print(y_test[:5])
-    predictions = note.denormalizeTimes(predictions, recList[0][-1]['end'])
-    y_test = note.denormalizeTimes(y_test, recList[0][-1]['end'])
-    print(musList[0][:5])
-    print(recList[0][:5])
-    print(x_test[0])
-    print(predictions[:5])
-    print(y_test[:5])
-    predictions[util.TIMESTEPS:] = y_test
-    path = 'C://Users//cpgaf//OneDrive//Documents//NetBeansProjects//Expressive//files'
-    ######
-    ### TODO undefined behavior on more than one song
-    for i in range(len(musList)):
+        predictions[util.TIMESTEPS:] = model.predict(x_test)
+        for i in range(len(y_test)):
+            if y_test[i, 2] == 1:
+                predictions[i + util.TIMESTEPS, 0] = predictions[i + util.TIMESTEPS - 1, 0]
+
+        print('Mean loss: {}'.format(np.mean(np.square(y_test - predictions[util.TIMESTEPS:]))))
+        # predictions = note.denormalizeTimes(predictions, recList[0][-1]['end'])
+        # y_test = note.denormalizeTimes(y_test, recList[0][-1]['end'])
+        print()
+        print(predictions[20:25])
+        print(y_test[:5])
+
+        path = 'C://Users//cpgaf//OneDrive//Documents//NetBeansProjects//Expressive//files'
         for j in range(predictions.shape[0]):
+            last_rec = recList[i][-1]['end']
+            last_mus = musList[i][-1]['end']
             length = musList[i][j]['end'] - musList[i][j]['start']
-            musList[i][j]['start'] += predictions[j][0]
-            musList[i][j]['end'] = musList[i][j]['start'] + length + predictions[j][1]
-            print(musList[i][j])
-        note.writePIDI(musList[i], path + "//predictions" + str(i) + ".txt")
+            # predicted_start = predictions[j][0] * last_rec / 100.0 + musList[i][j]['start'] * last_rec / last_mus
+            musList[i][j]['start'] = note.denormalizeTimeFromOffsetSubtract(predictions[j][0], musList[i][j],
+                                                                            last_mus, last_rec)
+            # predicted_length = predictions[j][1] * last_rec / 100.0 + length * last_rec / last_mus
+            musList[i][j]['end'] = musList[i][j]['start'] + note.denormalizeTimeFromOffsetSubtract(
+                predictions[j][1], length,
+                last_mus, last_rec)
+            if musList[i][j]['end'] - musList[i][j]['start'] <= 0:
+                musList[i][j]['end'] = musList[i][j]['start'] + 100
+        note.writePIDI(musList[i], path + "//predictions" + str(s) + ".txt")
+
 
 
 def main():
-    #model = train()
-    model = load_model("rnn_model.h5")
-    predict(model)
+    training_phase = True
+    if training_phase:
+        train(load=True)
+    else:
+        model = load_model("rnn_model.h5")
+        predict(model)
 
 # This if statement passes if this
 # was the file that was executed
