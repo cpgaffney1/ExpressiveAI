@@ -2,7 +2,7 @@ import os
 import numpy as np
 from src import note_util as note
 from sklearn import preprocessing
-
+from pathlib import Path
 
 TIMESTEPS = 20
 
@@ -26,7 +26,8 @@ def loadSongLists(files=None, for_predict=False):
 
     musList = []
     musNames = []
-    path = os.getcwd() + '/mus' + app
+    cwd = Path(os.getcwd())
+    path = str(cwd.parent) + '\\mus' + app
     musFiles = setFiles(files, path)
     for file in musFiles:
         name, song = note.readPIDI(file)
@@ -35,7 +36,7 @@ def loadSongLists(files=None, for_predict=False):
 
     recList = []
     recNames = []
-    path = os.getcwd() + '/rec' + app
+    path = str(cwd.parent) + '\\rec' + app
     recFiles = setFiles(files, path)
     for file in recFiles:
         name, song = note.readPIDI(file)
@@ -43,8 +44,6 @@ def loadSongLists(files=None, for_predict=False):
         recNames.append(name)
 
     assert(len(musList) == len(recList))
-    for i in range(len(musList)):
-        assert(len(musList[i]) == len(recList[i]))
     return musList, musNames, recList, recNames
 
 # counts as chord only if not the HEAD of a chord

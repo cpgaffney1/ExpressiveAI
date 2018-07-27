@@ -2,6 +2,8 @@ import heapq, collections, re, sys, time, os, random, time
 import numpy as np
 import copy
 from keras.models import load_model
+import src.note_util as note_util
+import src
 
 #########################################################
 # util functions for music
@@ -298,8 +300,8 @@ def match_by_predict(n_files):
     is_ml = False
     musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput(
         'C://Users//cpgaf//PycharmProjects//ExpressiveAI//javaOutput/javaOutput', range(0, n_files))
-    musList, recList = normalizeTimes(musList, recList)
-    musList, recList = normalizeIndices(musList, recList)
+    musList, recList = note_util.normalizeTimes(musList, recList)
+    musList, recList = note_util.normalizeIndices(musList, recList)
     predictor_model = load_model("C://Users//cpgaf//PycharmProjects//ExpressiveAI//src//matching_model.h5")
 
     predictedMatchesMapList = []
@@ -319,10 +321,10 @@ def match_by_predict(n_files):
         used_rec_indices = []
         lastMusIndex = musList[songIndex][-1]['index']
         lastRecIndex = recList[songIndex][-1]['index']
-        prevMusIndex = denormalizeIndex(x_raw[0][TIMESTEPS][3], lastMusIndex)
+        prevMusIndex = note_util.denormalizeIndex(x_raw[0][TIMESTEPS][3], lastMusIndex)
         indices = []
         for i in range(x.shape[0]):
-            curMusIndex = denormalizeIndex(x_raw[i][TIMESTEPS][3], lastMusIndex)
+            curMusIndex = note_util.denormalizeIndex(x_raw[i][TIMESTEPS][3], lastMusIndex)
 
             if curMusIndex > prevMusIndex:
                 # moved to predictions for next mus index
@@ -355,7 +357,7 @@ def match_by_predict(n_files):
 def predict_matches_for_indices_nn(x, predictor_model, indices, used_rec_indices,
                                 lastMusIndex, lastRecIndex):
     predictions = []
-    musIndex = denormalizeIndex(x[indices[0]][TIMESTEPS][3], lastMusIndex)
+    musIndex = note_util.denormalizeIndex(x[indices[0]][TIMESTEPS][3], lastMusIndex)
     #print('\n')
     for i in indices:
         #print('mus: {}, rec: {}'.format(musIndex,
@@ -367,14 +369,14 @@ def predict_matches_for_indices_nn(x, predictor_model, indices, used_rec_indices
         y = y[1]
         predictions.append(y)
     argmax = np.nanargmax(predictions)
-    recIndex = denormalizeIndex(x[indices[argmax]][TIMESTEPS][7], lastRecIndex)
+    recIndex = note_util.denormalizeIndex(x[indices[argmax]][TIMESTEPS][7], lastRecIndex)
     #print(predictions)
     return (musIndex, recIndex)
 
 def predict_matches_for_indices_ml(x, x_raw, predictor_model, indices, used_rec_indices,
                                 lastMusIndex, lastRecIndex):
     predictions = []
-    musIndex = denormalizeIndex(x_raw[indices[0]][TIMESTEPS][3], lastMusIndex)
+    musIndex = note_util.denormalizeIndex(x_raw[indices[0]][TIMESTEPS][3], lastMusIndex)
     #print('\n')
     for i in indices:
         #print('mus: {}, rec: {}'.format(musIndex,
@@ -386,15 +388,15 @@ def predict_matches_for_indices_ml(x, x_raw, predictor_model, indices, used_rec_
         y = y[1]
         predictions.append(y)
     argmax = np.nanargmax(predictions)
-    recIndex = denormalizeIndex(x_raw[indices[argmax]][TIMESTEPS][7], lastRecIndex)
+    recIndex = note_util.denormalizeIndex(x_raw[indices[argmax]][TIMESTEPS][7], lastRecIndex)
     #print(predictions)
     return (musIndex, recIndex)
 
 def load_data(core_input_shape=5, n_files=N_FILES):
     musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList = parseMatchedInput('../javaOutput/javaOutput', range(0,n_files))
-    musList, recList = normalizeTimes(musList, recList)
+    musList, recList = note_util.normalizeTimes(musList, recList)
     recList, matchesMapList = trim(recList, matchesMapList)
-    recList = addOffsets(musList, recList, matchesMapList)
+    recList = note_util.addOffsets(musList, recList, matchesMapList)
     x, y = dataAsWindow(musList, recList, matchesMapList)
     x_train = x.astype('float32')
     y_train = y.astype('float32')
@@ -575,7 +577,7 @@ def parseMatchedInputFromFile(filename, activeWeights):
         # continuing to read matching candidate data
         elif parsingMatches:
             arr = line.split(":")
-            musNote = decodeNote(arr[0][1:-1])
+            musNote = note_util.decodeNote(arr[0][1:-1])
             musIndex = musNote['index']
 
             # list of all potential matches
@@ -591,7 +593,7 @@ def parseMatchedInputFromFile(filename, activeWeights):
             arr = arr[1].split(';')
             for str in arr:
                 recNote, lcs, percent, distance, editDist = str.split('/')
-                recNote = decodeNote(recNote[1:-1])
+                recNote = note_util.decodeNote(recNote[1:-1])
                 recIndex = recNote['index']
 
                 # add rec index to potential match list for this musIndex
@@ -612,7 +614,7 @@ def parseMatchedInputFromFile(filename, activeWeights):
                 recPreferences[recIndex].update(musIndex, cost)
         # parsing rec notes
         elif not parsingMatches:
-            recNote = decodeNote(line)
+            recNote = note_util.decodeNote(line)
             rec.append(recNote)
         else:
             assert (False)
@@ -622,8 +624,12 @@ def parseMatchedInputFromFile(filename, activeWeights):
     return musList, recList, matchesMapList, songNames, matchValue, potentialMatchesMapList
 
 
+def performMatching(mus, rec, musPreferences, recPreferences):
+    # preferences not used
+    matches = src.matching_util.get_matching(mus, rec)
+    return matches, 0
 
-
+''' deprecated
 
 def performMatching(mus, rec, musPreferences, recPreferences):
     musPreferencesOrdered = {}
@@ -667,6 +673,8 @@ def performMatching(mus, rec, musPreferences, recPreferences):
     #        of.write("{},{}\n".format(pair[0],pair[1]))
 
     return matchesMap, matchValue
+    
+    '''
 
 UNMATCHED_PERCENT = 0
 def findMatches(musLen, recLen, musPreferences, recPreferences,

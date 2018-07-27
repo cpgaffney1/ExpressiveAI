@@ -2,300 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f19d400-7255-469b-adf0-d7bb618a6dfc" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/matching_util.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput0.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput1.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput10.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput100.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput101.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput102.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput103.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput104.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput105.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput106.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput107.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput108.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput109.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput11.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput110.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput111.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput112.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput113.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput114.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput115.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput116.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput117.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput118.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput119.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput12.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput120.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput121.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput122.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput123.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput124.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput125.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput126.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput127.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput128.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput129.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput13.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput130.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput131.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput132.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput133.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput134.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput135.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput136.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput137.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput138.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput139.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput14.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput140.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput141.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput142.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput143.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput144.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput145.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput146.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput147.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput148.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput149.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput15.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput150.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput151.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput152.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput153.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput154.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput155.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput156.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput157.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput158.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput159.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput16.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput160.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput161.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput162.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput163.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput164.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput165.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput166.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput167.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput168.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput169.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput17.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput170.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput171.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput172.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput173.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput174.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput175.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput176.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput177.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput178.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput179.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput18.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput180.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput181.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput182.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput183.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput184.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput185.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput186.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput187.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput188.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput189.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput19.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput190.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput191.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput192.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput193.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput194.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput195.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput196.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput197.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput198.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput199.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput2.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput20.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput20.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput200.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput201.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput202.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput203.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput204.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput205.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput206.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput207.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput208.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput209.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput21.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput21.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput210.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput211.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput212.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput213.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput214.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput215.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput216.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput217.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput218.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput219.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput22.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput22.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput220.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput221.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput222.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput223.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput224.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput225.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput226.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput227.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput228.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput229.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput23.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput23.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput230.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput231.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput232.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput233.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput234.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput235.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput236.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput237.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput238.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput239.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput24.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput24.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput240.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput241.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput242.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput243.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput244.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput245.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput246.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput247.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput248.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput249.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput25.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput25.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput250.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput251.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput252.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput253.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput254.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput255.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput256.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput257.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput258.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput259.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput26.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput26.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput260.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput261.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput262.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput263.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput264.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput265.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput266.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput267.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput268.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput269.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput27.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput27.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput270.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput271.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput272.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput273.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput274.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput275.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput276.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput277.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput278.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput279.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput28.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput28.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput280.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput281.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput282.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput283.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput284.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput285.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput286.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput287.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput29.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput29.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput3.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput30.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput30.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput31.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput31.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput32.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput32.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput33.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput33.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput34.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput34.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput35.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput35.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput36.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput36.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput37.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput38.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput39.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput4.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput40.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput41.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput42.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput43.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput44.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput45.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput46.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput47.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput48.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput49.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput5.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput50.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput51.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput52.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput53.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput54.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput55.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput56.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput57.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput58.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput59.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput6.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput60.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput61.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput62.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput63.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput64.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput65.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput66.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput67.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput68.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput69.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput7.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput70.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput71.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput72.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput73.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput74.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput75.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput76.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput77.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput78.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput79.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput8.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput80.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput81.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput82.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput83.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput84.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput85.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput86.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput87.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput88.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput89.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" afterPath="$PROJECT_DIR$/javaOutput/javaOutput9.txt" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput90.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput91.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput92.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput93.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput94.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput95.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput96.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput97.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput98.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javaOutput/javaOutput99.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/rnn.py" afterPath="$PROJECT_DIR$/rnn.py" />
-      <change beforePath="$PROJECT_DIR$/rnn_model.h5" afterPath="$PROJECT_DIR$/rnn_model.h5" />
-      <change beforePath="$PROJECT_DIR$/rnn_predict.py" afterPath="$PROJECT_DIR$/rnn_predict.py" />
-      <change beforePath="$PROJECT_DIR$/util.py" afterPath="$PROJECT_DIR$/util.py" />
-      <change beforePath="$PROJECT_DIR$/visualize_rec.py" afterPath="$PROJECT_DIR$/visualize_rec.py" />
+      <change beforePath="$PROJECT_DIR$/src/rnn_util.py" afterPath="$PROJECT_DIR$/src/rnn_util.py" />
+      <change beforePath="$PROJECT_DIR$/src/util.py" afterPath="$PROJECT_DIR$/src/util.py" />
+      <change beforePath="$PROJECT_DIR$/src/visualize_rec.py" afterPath="$PROJECT_DIR$/src/visualize_rec.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -306,72 +17,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="util.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="226" column="56" lean-forward="false" selection-start-line="226" selection-start-column="56" selection-end-line="226" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnn.py">
+        <entry file="file://$PROJECT_DIR$/src/rnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="34">
+              <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="79" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rnn_predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnn_predict.py">
+      <file leaf-file-name="note_util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/note_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="64" column="39" lean-forward="false" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1050">
+              <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enhanced_nn_predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="38" column="88" lean-forward="false" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+            <state relative-caret-position="8904">
+              <caret line="628" column="34" lean-forward="false" selection-start-line="628" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="visualize_rec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualize_rec.py">
+        <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="4" column="109" lean-forward="false" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
+            <state relative-caret-position="212">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matching_util.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/matching_util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javaOutput0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rec/javaOutput0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13998">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javaOutput0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mus/javaOutput0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13893">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rnn_util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rnn_util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="enhanced_nn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
+        <entry file="file://$PROJECT_DIR$/src/enhanced_nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="477">
+              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -406,6 +147,16 @@
       <find>start_normal</find>
       <find>offset</find>
       <find>load</find>
+      <find>javaO</find>
+      <find>write</find>
+      <find>splitDataTwo</find>
+      <find>writePidi</find>
+      <find>len_offset</find>
+      <find>denormalize</find>
+      <find>58</find>
+      <find>for_predict</find>
+      <find>match_by</find>
+      <find>loadSongLists</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -433,14 +184,26 @@
         <option value="$PROJECT_DIR$/visualize_rec.py" />
         <option value="$PROJECT_DIR$/rnn.py" />
         <option value="$PROJECT_DIR$/util.py" />
+        <option value="$PROJECT_DIR$/src/matching_nn.py" />
+        <option value="$PROJECT_DIR$/src/enhanced_nn_predict.py" />
+        <option value="$PROJECT_DIR$/src/enhanced_nn.py" />
+        <option value="$PROJECT_DIR$/src/mus_infer.py" />
+        <option value="$PROJECT_DIR$/src/prob_infer_utils.py" />
+        <option value="$PROJECT_DIR$/src/rnn_predict.py" />
+        <option value="$PROJECT_DIR$/src/parser_util.py" />
+        <option value="$PROJECT_DIR$/src/note_util.py" />
+        <option value="$PROJECT_DIR$/src/rnn.py" />
+        <option value="$PROJECT_DIR$/src/util.py" />
+        <option value="$PROJECT_DIR$/src/rnn_util.py" />
+        <option value="$PROJECT_DIR$/src/visualize_rec.py" />
+        <option value="$PROJECT_DIR$/src/matching_util.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -468,7 +231,17 @@
             <path>
               <item name="ExpressiveAI" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExpressiveAI" type="462c0819:PsiDirectoryNode" />
-              <item name="javaOutput" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExpressiveAI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExpressiveAI" type="462c0819:PsiDirectoryNode" />
+              <item name="good_models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExpressiveAI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExpressiveAI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -479,16 +252,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/enhanced_experiment.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/cpgaf/Anaconda3/envs/untitled/Lib/site-packages/matplotlib/cbook/__init__.py" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/cpgaf/PycharmProjects/ExpressiveAI/src/util.py" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cpgaffney1\PycharmProjects\Music\javaOutput" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cpgaffney1\PycharmProjects\Music" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cpgaf\PycharmProjects\ExpressiveAI\good_models" />
+      <recent name="C:\Users\cpgaf\PycharmProjects\ExpressiveAI\src" />
+      <recent name="C:\Users\cpgaf\PycharmProjects\ExpressiveAI\data" />
+      <recent name="C:\Users\cpgaffney1\PycharmProjects\Music\javaOutput" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -503,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.rnn">
+  <component name="RunManager" selected="Python.visualize_rec">
     <configuration name="conv" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -546,13 +322,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/enhanced_nn.py" />
       <option name="PARAMETERS" value="-n" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -564,13 +340,31 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\cpgaf\AppData\Local\Programs\Python\Python36\python3.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/enhanced_nn_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="matching_nn" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\Anaconda3\envs\untitled\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhanced_nn_predict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/matching_nn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -594,6 +388,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="mus_infer" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cpgaf\Anaconda3\envs\untitled\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Music" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/mus_infer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="rnn" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -606,7 +418,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rnn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -660,7 +472,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/very_simple_nn.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\cpgaf\PycharmProjects\ExpressiveAI\src\very_simple_nn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -673,12 +485,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\cpgaf\Anaconda3\envs\untitled\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Music" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_rec.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/visualize_rec.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -748,7 +560,7 @@
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="10">
+    <list size="12">
       <item index="0" class="java.lang.String" itemvalue="Python.rnn" />
       <item index="1" class="java.lang.String" itemvalue="Python.rnn_predict" />
       <item index="2" class="java.lang.String" itemvalue="Python.conv" />
@@ -757,8 +569,10 @@
       <item index="5" class="java.lang.String" itemvalue="Python.very_simple" />
       <item index="6" class="java.lang.String" itemvalue="Python.enhanced_predict" />
       <item index="7" class="java.lang.String" itemvalue="Python.visualize_rec" />
-      <item index="8" class="java.lang.String" itemvalue="Python.two_models" />
-      <item index="9" class="java.lang.String" itemvalue="Python.enhanced" />
+      <item index="8" class="java.lang.String" itemvalue="Python.mus_infer" />
+      <item index="9" class="java.lang.String" itemvalue="Python.matching_nn" />
+      <item index="10" class="java.lang.String" itemvalue="Python.two_models" />
+      <item index="11" class="java.lang.String" itemvalue="Python.enhanced" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -787,19 +601,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16197917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21099947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46432617" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46432492" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34314835" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28425822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6542261" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25821066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50056624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -833,113 +647,34 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="building matching algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="building matching algorithm" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/matching_util.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicPredict.py" />
-    <entry file="file://$PROJECT_DIR$/weights.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2331">
-          <caret line="111" column="36" lean-forward="false" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicPredict.py" />
-    <entry file="file://$PROJECT_DIR$/javaOutput.txt" />
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2331">
-          <caret line="111" column="36" lean-forward="false" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicPredict.py" />
-    <entry file="file://$PROJECT_DIR$/javaOutput.txt" />
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2331">
-          <caret line="111" column="36" lean-forward="false" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="77" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="75" column="78" lean-forward="false" selection-start-line="75" selection-start-column="78" selection-end-line="75" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicPredict.py" />
-    <entry file="file://$PROJECT_DIR$/musTest.txt" />
-    <entry file="file://$PROJECT_DIR$/weights.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicPredict.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/indexing.py" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/internals.py" />
     <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/testMus.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testMus.txt" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/linalg/linalg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -955,13 +690,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testData.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="6514" column="28" lean-forward="false" selection-start-line="6514" selection-start-column="28" selection-end-line="6514" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testData.txt" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/tensor_shape.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/ops.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/op_def_library.py" />
@@ -979,28 +708,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
+    <entry file="file://$PROJECT_DIR$/src/predict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="335" column="29" lean-forward="false" selection-start-line="335" selection-start-column="29" selection-end-line="335" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/very_simple_nn.py">
+    <entry file="file://$PROJECT_DIR$/src/very_simple_nn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_nn.py">
+    <entry file="file://$PROJECT_DIR$/src/simple_nn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nn_predict.py">
+    <entry file="file://$PROJECT_DIR$/src/nn_predict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="34" column="73" lean-forward="false" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
@@ -1008,14 +737,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javaOutput.txt" />
-    <entry file="file://$PROJECT_DIR$/midi_vis.py">
+    <entry file="file://$PROJECT_DIR$/src/midi_vis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlStable.py">
+    <entry file="file://$PROJECT_DIR$/src/mlStable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
@@ -1029,34 +758,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javaOutput/javaOutput4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_experiment.py">
+    <entry file="file://$PROJECT_DIR$/javaOutput/javaOutput4.txt" />
+    <entry file="file://$PROJECT_DIR$/src/enhanced_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javaOutput/javaOutput0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_nn_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="38" column="88" lean-forward="false" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,14 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enhanced_nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/untitled/Lib/site-packages/keras/engine/topology.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -1089,43 +787,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnn_predict.py">
+    <entry file="file://$PROJECT_DIR$/data/x_train.npy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="64" column="39" lean-forward="false" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javaOutput/javaOutput0.txt" />
+    <entry file="file://$PROJECT_DIR$/src/matching_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignore.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testData0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enhanced_nn_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2856">
+          <caret line="141" column="4" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="144" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inferredMus/inferred0.txt" />
+    <entry file="file://$PROJECT_DIR$/src/prob_infer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mus_infer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/untitled/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser_util.py" />
+    <entry file="file://$PROJECT_DIR$/src/rnn_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mus_predict/javaOutput0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rec_predict/javaOutput0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/untitled/Lib/site-packages/keras/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="450" column="0" lean-forward="false" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rec/javaOutput3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mus/javaOutput1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="79" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_rec.py">
+    <entry file="file://$PROJECT_DIR$/src/enhanced_nn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="109" lean-forward="false" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
+        <state relative-caret-position="477">
+          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnn.py">
+    <entry file="file://$PROJECT_DIR$/src/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="8904">
+          <caret line="628" column="34" lean-forward="false" selection-start-line="628" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
+    <entry file="file://$PROJECT_DIR$/src/note_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="226" column="56" lean-forward="false" selection-start-line="226" selection-start-column="56" selection-end-line="226" selection-end-column="56" />
+        <state relative-caret-position="-1050">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rnn_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rec/javaOutput0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13998">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mus/javaOutput0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13893">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matching_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
