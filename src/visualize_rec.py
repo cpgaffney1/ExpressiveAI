@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 cwd = Path(os.getcwd())
 sys.path.append(cwd.parent)
 sys.path.append(os.getcwd())
+print(sys.path)
 import src
 import src.rnn_util
 import src.matching_util
