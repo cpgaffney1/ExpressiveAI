@@ -1,8 +1,10 @@
 import sys
 import os
+from pathlib import Path
 import matplotlib.pyplot as plt
+cwd = Path(os.getcwd())
+sys.path.append(cwd.parent)
 sys.path.append(os.getcwd())
-sys.path.append(os.getcwd() + '/src')
 import src
 import src.rnn_util
 import src.matching_util
