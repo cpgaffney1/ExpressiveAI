@@ -1,22 +1,39 @@
 import numpy as np
+import copy
+import time
 
 N_BRANCHES = 100
+MAX_SKIP_FRACTION = 0.05
+n_max_skip = 0
+potential_matches = []
 
 def get_matching(mus, rec):
     print('beginning matching')
-    potential_matches = perform_matching(mus, rec, list(range(len(mus))), list(range(len(rec))), [])
+    global potential_matches
+    potential_matches = []
+    global n_max_skip
+    n_max_skip = int(MAX_SKIP_FRACTION * len(mus))
+    branch = MatchesMap()
+    perform_matching(mus, rec, list(range(len(mus))), list(range(len(rec))), branch)
     print('finished matching')
     return sort_potential_matches(potential_matches)[0].map
 
-def perform_matching(mus, rec, mus_indices, rec_indices, potential_matches):
-    print('matching next chord')
+#returns null
+def perform_matching(mus, rec, mus_indices, rec_indices, branch):
+    assert(n_max_skip != 0)
+    if branch.count > n_max_skip:
+        return
+    # if branch has skipped too many notes, prune branch
+    global potential_matches
+    potential_matches = filter_potential_matches(potential_matches)
     mus, mus_chord = next_chord(mus)
+    # no mus notes left to match, so this branch is complete
     if len(mus_chord) == 0:
-        return potential_matches
+        # add remaining notes in rec to skipped notes
+        branch.count += len(rec)
+        potential_matches += [branch]
+        return
     rec_chord = rec[:len(mus_chord)]
-    if len(mus_chord) != len(rec_chord):
-        print('hi')
-    assert (len(mus_chord) == len(rec_chord))
     rec = rec[len(rec_chord):]
     mus_chord_indices = mus_indices[:len(mus_chord)]
     rec_chord_indices = rec_indices[:len(rec_chord)]
@@ -24,23 +41,35 @@ def perform_matching(mus, rec, mus_indices, rec_indices, potential_matches):
     rec_indices = rec_indices[len(rec_chord):]
     match_update, mus_chord, rec_chord, mus_chord_indices, rec_chord_indices = attempt_chord_matching(
         mus_chord, rec_chord, mus_chord_indices, rec_chord_indices)
-    potential_matches = update_potential_matches(potential_matches, match_update)
-    match_update_list = []
+    branch = update_branch(branch, match_update)
+    # mus and rec chord are different lengths, so should be out of rec notes. Branch is complete
+    if len(mus_chord) != len(rec_chord):
+        assert (len(rec) == 0)
+        branch.count += len(mus_chord) + len(rec_chord)
+        potential_matches += [branch]
+        return
     # case 1: everything is matched: recurse and ignore other cases. Skipped count not incremented
     assert(len(mus_chord) == len(rec_chord))
-    if len(mus_chord) == 0:
-        potential_matches = perform_matching(mus, rec, mus_indices, rec_indices, potential_matches)
-        return potential_matches
+    if len(mus_chord) == 0 and len(rec_chord) == 0:
+        start = time.time()
+        perform_matching(mus, rec, mus_indices, rec_indices, branch)
+        dur = time.time() - start
+        if dur > 1:
+            print('1: {}, remaining: {}'.format(dur, len(mus)))
     else:
         # case 2: delete mus notes, recurse immediately. Add rec notes back to the beginning of rec
         skipped = len(mus_chord)
-        potential_matches_branch1 = perform_matching(
+        start = time.time()
+        perform_matching(
             mus, rec_chord + rec, mus_indices, rec_chord_indices + rec_indices,
-            increment_skipped(potential_matches, skipped)
+            MatchesMap(matches_map=branch).increment(skipped)
         )
+        dur = time.time() - start
+        if dur > 1:
+            print('2: {}, remaining: {}'.format(dur, len(mus)))
         # case 3: rec notes are extra, delete them until all are matched
-        potential_matches_branch2 = potential_matches
         skipped = 0
+        delete_rec_branch = branch
         while len(rec_chord) > 0:
             # delete rec notes
             skipped += len(rec_chord)
@@ -51,29 +80,33 @@ def perform_matching(mus, rec, mus_indices, rec_indices, potential_matches):
             # attempt to match
             match_update, mus_chord, rec_chord, mus_chord_indices, rec_chord_indices = attempt_chord_matching(
                 mus_chord, rec_chord, mus_chord_indices, rec_chord_indices)
-            potential_matches_branch2 = update_potential_matches(potential_matches_branch2, match_update)
-        potential_matches_branch2 = perform_matching(
-            mus, rec, mus_indices, rec_indices, increment_skipped(potential_matches_branch2, skipped)
+            delete_rec_branch = update_branch(branch, match_update)
+        start = time.time()
+        perform_matching(
+            mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=delete_rec_branch).increment(skipped)
         )
-        potential_matches = potential_matches_branch1 + potential_matches_branch2
-        potential_matches = filter_potential_matches(potential_matches)
-        return potential_matches
+        dur = time.time() - start
+        if dur > 1:
+            print('3: {}, remaining: {}'.format(dur, len(mus)))
+        start = time.time()
+        # case 4: delete everything
+        skipped = len(mus_chord) + len(rec_chord)
+        perform_matching(
+            mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=branch).increment(skipped)
+        )
+        dur = time.time() - start
+        if dur > 1:
+            print('4: {}, remaining: {}'.format(dur, len(mus)))
 
 
-
-def update_potential_matches(potential_matches, update):
+def update_branch(branch, update):
     # update is a map of mus index to rec index
     if len(update) == 0:
-        return potential_matches
-    if len(potential_matches) == 0:
-        potential_matches = [MatchesMap(map=update, count=0)]
-        return potential_matches
-    for i in range(len(potential_matches)):
-        for key in update:
-            if key in potential_matches[i].map.keys():
-                print('hi')
-        potential_matches[i].map.update(update)
-    return potential_matches
+        return branch
+    for key in update:
+        assert(key not in branch.map.keys())
+    branch.map.update(update)
+    return branch
 
 def attempt_chord_matching(mus_chord, rec_chord, mus_indices, rec_indices):
     match_update = {}
@@ -146,10 +179,18 @@ def filter_potential_matches(potential_matches):
 
 class MatchesMap:
     # just a map with associated data. Data is a count of skipped notes
-    def __init__(self, map=None, count=0):
-        if map is None:
-            self.map = {}
+    def __init__(self, matches_map=None, map=None, count=0):
+        if matches_map is None:
+            if map is None:
+                self.map = {}
+            else:
+                self.map = map
+            self.count = count
         else:
-            self.map = map
-        self.count = count
+            self.map = copy.deepcopy(matches_map.map)
+            self.count = copy.deepcopy(matches_map.count)
+
+    def increment(self, count):
+        self.count += count
+        return self
 
