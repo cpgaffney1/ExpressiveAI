@@ -51,8 +51,8 @@
       <file leaf-file-name="visualize_rec.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -631,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532805490604</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="matching algorithm complete but needs optimization">
+      <created>1532805530447</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532805530447</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1017,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

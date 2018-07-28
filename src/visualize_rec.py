@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 import matplotlib.pyplot as plt
 cwd = Path(os.getcwd())
-sys.path.append(cwd.parent)
+sys.path.append(cwd.parent.__str__())
 sys.path.append(os.getcwd())
 print(sys.path)
 import src
