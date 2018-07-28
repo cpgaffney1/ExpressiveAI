@@ -1,5 +1,8 @@
-from src import util
+import sys
+import os
 import matplotlib.pyplot as plt
+sys.path.append(os.getcwd())
+sys.path.append(os.getcwd() + '/src')
 import src
 import src.rnn_util
 import src.matching_util
