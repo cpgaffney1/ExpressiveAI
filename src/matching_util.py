@@ -30,9 +30,6 @@ def perform_matching(in_progress_branches):
         completed_branches = filter_potential_matches(completed_branches)
         # "pop" from back of completed_branches. Should always append most recent elements
         mus, rec, branch = in_progress_branches.pop(-1)
-        if len(mus) < 15:
-            completed_branches += [branch]
-            return
         if len(mus) < min_len:
             min_len = len(mus)
         if i % 1000 == 0:

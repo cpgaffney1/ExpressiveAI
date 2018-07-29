@@ -4,6 +4,7 @@
     <list default="true" id="2f19d400-7255-469b-adf0-d7bb618a6dfc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/matching_util.py" afterPath="$PROJECT_DIR$/src/matching_util.py" />
+      <change beforePath="$PROJECT_DIR$/src/visualize_rec.py" afterPath="$PROJECT_DIR$/src/visualize_rec.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visualize_rec.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="visualize_rec.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -60,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matching_util.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matching_util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matching_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="323">
+              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -174,9 +175,9 @@
         <option value="$PROJECT_DIR$/src/util.py" />
         <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/src/rnn_util.py" />
-        <option value="$PROJECT_DIR$/src/visualize_rec.py" />
         <option value="$PROJECT_DIR$/src/note_util.py" />
         <option value="$PROJECT_DIR$/src/matching_util.py" />
+        <option value="$PROJECT_DIR$/src/visualize_rec.py" />
       </list>
     </option>
   </component>
@@ -660,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532888133542</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="refactored to avoid most recursion. added more limits">
+      <created>1532889907686</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1532889907686</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1037,22 +1045,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
+    <entry file="file://$PROJECT_DIR$/src/matching_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matching_util.py">
+    <entry file="file://$PROJECT_DIR$/src/visualize_rec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="357">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

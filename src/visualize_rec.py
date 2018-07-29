@@ -34,7 +34,7 @@ def main():
         pylab.plot(actual, label='actual rec')
         pylab.title(musNames[i])
         pylab.legend(loc='upper left')
-        pylab.show()
+        pylab.savefig('plot{}.png'.format(i))
 
 
 # This if statement passes if this
