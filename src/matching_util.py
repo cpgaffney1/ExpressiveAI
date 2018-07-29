@@ -6,6 +6,7 @@ N_BRANCHES = 100
 MAX_SKIP_FRACTION = 0.05
 n_max_skip = 0
 potential_matches = []
+reached = False
 
 def get_matching(mus, rec):
     print('beginning matching')
@@ -13,18 +14,21 @@ def get_matching(mus, rec):
     potential_matches = []
     global n_max_skip
     n_max_skip = int(MAX_SKIP_FRACTION * len(mus))
+    n_max_skip = 20
     branch = MatchesMap()
     perform_matching(mus, rec, list(range(len(mus))), list(range(len(rec))), branch)
     print('finished matching')
-    return sort_potential_matches(potential_matches)[0].map
+    potential_matches = sort_potential_matches(potential_matches)
+    return potential_matches[0].map
 
 #returns null
 def perform_matching(mus, rec, mus_indices, rec_indices, branch):
+    global potential_matches
     assert(n_max_skip != 0)
     if branch.count > n_max_skip:
+        potential_matches += [branch]
         return
     # if branch has skipped too many notes, prune branch
-    global potential_matches
     potential_matches = filter_potential_matches(potential_matches)
     mus, mus_chord = next_chord(mus)
     # no mus notes left to match, so this branch is complete
@@ -57,47 +61,59 @@ def perform_matching(mus, rec, mus_indices, rec_indices, branch):
         if dur > 1:
             print('1: {}, remaining: {}'.format(dur, len(mus)))
     else:
+        global reached
+        if not reached:
+            reached = True
         # case 2: delete mus notes, recurse immediately. Add rec notes back to the beginning of rec
-        skipped = len(mus_chord)
-        start = time.time()
-        perform_matching(
-            mus, rec_chord + rec, mus_indices, rec_chord_indices + rec_indices,
-            MatchesMap(matches_map=branch).increment(skipped)
-        )
-        dur = time.time() - start
-        if dur > 1:
-            print('2: {}, remaining: {}'.format(dur, len(mus)))
+        del_mus_branch(mus, rec, mus_chord, rec_chord, rec_chord_indices, mus_indices, rec_indices, branch)
         # case 3: rec notes are extra, delete them until all are matched
-        skipped = 0
-        delete_rec_branch = branch
-        while len(rec_chord) > 0:
-            # delete rec notes
-            skipped += len(rec_chord)
-            rec_chord = rec[:len(rec_chord)]
-            rec = rec[len(rec_chord):]
-            rec_chord_indices = rec_chord_indices[:len(rec_chord)]
-            rec_indices = rec_indices[len(rec_chord):]
-            # attempt to match
-            match_update, mus_chord, rec_chord, mus_chord_indices, rec_chord_indices = attempt_chord_matching(
-                mus_chord, rec_chord, mus_chord_indices, rec_chord_indices)
-            delete_rec_branch = update_branch(branch, match_update)
-        start = time.time()
-        perform_matching(
-            mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=delete_rec_branch).increment(skipped)
-        )
-        dur = time.time() - start
-        if dur > 1:
-            print('3: {}, remaining: {}'.format(dur, len(mus)))
-        start = time.time()
+        del_rec_branch(mus, rec, mus_chord, rec_chord, mus_chord_indices, mus_indices, rec_indices, branch)
         # case 4: delete everything
-        skipped = len(mus_chord) + len(rec_chord)
-        perform_matching(
-            mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=branch).increment(skipped)
-        )
-        dur = time.time() - start
-        if dur > 1:
-            print('4: {}, remaining: {}'.format(dur, len(mus)))
+        del_both_branch(mus, rec, mus_chord, rec_chord, mus_indices, rec_indices, branch)
 
+
+def del_mus_branch(mus, rec, mus_chord, rec_chord, rec_chord_indices, mus_indices, rec_indices, branch):
+    skipped = len(mus_chord)
+    start = time.time()
+    perform_matching(
+        mus, rec_chord + rec, mus_indices, rec_chord_indices + rec_indices,
+        MatchesMap(matches_map=branch).increment(skipped)
+    )
+    dur = time.time() - start
+    if dur > 1:
+        print('2: {}, remaining: {}'.format(dur, len(mus)))
+
+def del_rec_branch(mus, rec, mus_chord, rec_chord, mus_chord_indices, mus_indices, rec_indices, branch):
+    skipped = 0
+    delete_rec_branch = branch
+    while len(rec_chord) > 0:
+        # delete rec notes
+        skipped += len(rec_chord)
+        rec_chord = rec[:len(rec_chord)]
+        rec = rec[len(rec_chord):]
+        rec_chord_indices = rec_indices[:len(rec_chord)]
+        rec_indices = rec_indices[len(rec_chord):]
+        # attempt to match
+        match_update, mus_chord, rec_chord, mus_chord_indices, rec_chord_indices = attempt_chord_matching(
+            mus_chord, rec_chord, mus_chord_indices, rec_chord_indices)
+        delete_rec_branch = update_branch(branch, match_update)
+    start = time.time()
+    perform_matching(
+        mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=delete_rec_branch).increment(skipped)
+    )
+    dur = time.time() - start
+    if dur > 1:
+        print('3: {}, remaining: {}'.format(dur, len(mus)))
+
+def del_both_branch(mus, rec, mus_chord, rec_chord, mus_indices, rec_indices, branch):
+    start = time.time()
+    skipped = len(mus_chord) + len(rec_chord)
+    perform_matching(
+        mus, rec, mus_indices, rec_indices, MatchesMap(matches_map=branch).increment(skipped)
+    )
+    dur = time.time() - start
+    if dur > 1:
+        print('4: {}, remaining: {}'.format(dur, len(mus)))
 
 def update_branch(branch, update):
     # update is a map of mus index to rec index

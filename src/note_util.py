@@ -61,7 +61,7 @@ def addOffsets(musList, recList):
 def readPIDI(path):
     with open(path) as f:
         lines = f.readlines()
-    if lines[0] == "NAME":
+    if lines[0].__contains__("NAME"):
         name = lines[1]
         lines = lines[2:]
     else:
