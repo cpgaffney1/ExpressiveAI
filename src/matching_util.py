@@ -24,15 +24,21 @@ def get_matching(mus, rec):
 def perform_matching(in_progress_branches):
     global completed_branches
     i = 0
+    min_len = float('inf')
     while len(in_progress_branches) > 0:
         # prune completed branches
         completed_branches = filter_potential_matches(completed_branches)
         # "pop" from back of completed_branches. Should always append most recent elements
         mus, rec, branch = in_progress_branches.pop(-1)
+        if len(mus) < 15:
+            completed_branches += [branch]
+            return
+        if len(mus) < min_len:
+            min_len = len(mus)
         if i % 1000 == 0:
-            print('In progress: {}, Average mus notes: {}, Completed: {}'.format(
+            print('In progress: {}, Average mus notes: {}, Furthest progress: {}, Completed: {}'.format(
                 len(in_progress_branches), np.average(np.asarray([float(len(br[0])) for br in in_progress_branches])),
-                len(completed_branches)
+                min_len, len(completed_branches)
             ))
         # filter out long branch
         if branch.count > n_max_skip:
