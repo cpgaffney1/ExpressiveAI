@@ -28,7 +28,7 @@ def perform_matching(in_progress_branches):
         # prune completed branches
         completed_branches = filter_potential_matches(completed_branches)
         # "pop" from back of completed_branches. Should always append most recent elements
-        mus, rec, branch = in_progress_branches.pop(0)
+        mus, rec, branch = in_progress_branches.pop(-1)
         if i % 1000 == 0:
             print('In progress: {}, Average remaining notes: {}, Completed: {}'.format(
                 len(in_progress_branches), np.average(np.asarray([float(len(br[0])) for br in in_progress_branches])),

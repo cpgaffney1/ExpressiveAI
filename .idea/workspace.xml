@@ -63,8 +63,8 @@
       <file leaf-file-name="matching_util.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/matching_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="105">
+              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -639,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532885188086</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactored to avoid most recursion. added more limits. needs testing">
+      <created>1532888036913</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532888036913</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1027,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matching_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="105">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
