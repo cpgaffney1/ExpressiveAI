@@ -3,7 +3,7 @@ import copy
 import time
 
 N_BRANCHES = 1000
-MAX_SKIP_FRACTION = 0.05
+MAX_SKIP_FRACTION = 0.1
 # used only for del_rec_branch
 N_LOCAL_MAX_SKIP = 15
 n_max_skip = 0
@@ -23,12 +23,23 @@ def get_matching(mus, rec):
 
 def perform_matching(in_progress_branches):
     global completed_branches
-    while len(completed_branches) > 0:
+    i = 0
+    while len(in_progress_branches) > 0:
         # prune completed branches
         completed_branches = filter_potential_matches(completed_branches)
         # "pop" from back of completed_branches. Should always append most recent elements
-        mus, rec, branch = in_progress_branches.pop(-1)
+        mus, rec, branch = in_progress_branches.pop(0)
+        if i % 1000 == 0:
+            print('In progress: {}, Average remaining notes: {}, Completed: {}'.format(
+                len(in_progress_branches), np.average(np.asarray([float(len(br[0])) for br in in_progress_branches])),
+                len(completed_branches)
+            ))
+        # filter out long branch
+        if branch.count > n_max_skip:
+            continue
         in_progress_branches += perform_matching_loop(mus, rec, branch)
+        i += 1
+
 
 # returns a list of (mus, rec, branch) tuples to append to in_progress_branches
 # returns [] if nothing should be added
@@ -78,25 +89,25 @@ def del_rec_branch(mus, rec, mus_chord, rec_chord, branch):
     if skipped > N_LOCAL_MAX_SKIP:
         return []
     else:
-        return [(mus, rec, MatchesMap(matches_map=branch).increment(skipped))]
+        return [(mus.copy(), rec.copy(), branch.increment(skipped))]
 
 def del_both_branch(mus, rec, mus_chord, rec_chord, branch):
     skipped = len(mus_chord) + len(rec_chord)
-    return [(mus, rec, MatchesMap(matches_map=branch).increment(skipped))]
+    return [(mus.copy(), rec.copy(), branch.increment(skipped))]
 
 def account_for_error_cases(mus, rec, branch, mus_chord, rec_chord):
     # case 1: everything is matched: recurse and ignore other cases. Skipped count not incremented
     assert (len(mus_chord) == len(rec_chord))
     if len(mus_chord) == 0 and len(rec_chord) == 0:
-        return [(mus, rec, branch)]
+        return [(mus.copy(), rec.copy(), branch)]
     else:
         new_branches = []
         # case 2: delete mus notes, recurse immediately. Add rec notes back to the beginning of rec
-        new_branches += del_mus_branch(mus, rec, mus_chord, rec_chord, branch)
+        new_branches += del_mus_branch(mus, rec, mus_chord, rec_chord, MatchesMap(matches_map=branch))
         # case 3: rec notes are extra, delete them until all are matched
-        new_branches += del_rec_branch(mus, rec, mus_chord, rec_chord, branch)
+        new_branches += del_rec_branch(mus, rec, mus_chord, rec_chord, MatchesMap(matches_map=branch))
         # case 4: delete everything
-        new_branches += del_both_branch(mus, rec, mus_chord, rec_chord, branch)
+        new_branches += del_both_branch(mus, rec, mus_chord, rec_chord, MatchesMap(matches_map=branch))
         return new_branches
 
 
