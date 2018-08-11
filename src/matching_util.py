@@ -2,13 +2,24 @@ import numpy as np
 import copy
 import time
 
-N_BRANCHES = 1000
+N_BRANCHES = 10000
+N_IN_PROGRESS = 10000
 MAX_SKIP_FRACTION = 0.1
 # used only for del_rec_branch
-N_LOCAL_MAX_SKIP = 15
+N_LOCAL_MAX_SKIP = 8
 n_max_skip = 0
 completed_branches = []
 reached = False
+reason_returned = {
+    'mus_completed':0,
+    'rec_completed':0,
+    'del_mus_wrong':0,
+    'skipped>local_max_skip':0,
+    'del_rec':0,
+    'del_both':0,
+    'everything_matched':0,
+    'skipped>max_skip':0,
+}
 
 def get_matching(mus, rec):
     print('beginning matching')
@@ -18,31 +29,41 @@ def get_matching(mus, rec):
     n_max_skip = int(MAX_SKIP_FRACTION * len(mus))
     perform_matching([(mus, rec, MatchesMap())])
     print('finished matching')
-    completed_branches = sort_potential_matches(completed_branches)
+    completed_branches = sort_completed_branches(completed_branches)
     return completed_branches[0].map
 
 def perform_matching(in_progress_branches):
     global completed_branches
     i = 0
     min_len = float('inf')
+    start = time.time()
     while len(in_progress_branches) > 0:
         # prune completed branches
-        completed_branches = filter_potential_matches(completed_branches)
-        # "pop" from back of completed_branches. Should always append most recent elements
-        mus, rec, branch = in_progress_branches.pop(-1)
+        completed_branches = filter_completed_branches(completed_branches)
+        if len(in_progress_branches) > N_IN_PROGRESS:
+            in_progress_branches = in_progress_branches[:N_IN_PROGRESS]
+        mus, rec, branch = pop_best_branch(in_progress_branches)
         if len(mus) < min_len:
             min_len = len(mus)
         if i % 1000 == 0:
-            print('In progress: {}, Average mus notes: {}, Furthest progress: {}, Completed: {}'.format(
+            if time.time() - start > 60*60*4 and len(completed_branches) > 0:
+                break
+            print('In progress: {}, Average mus notes: {}, Furthest progress: {}, Completed: {}, \nReasons: {}\n'.format(
                 len(in_progress_branches), np.average(np.asarray([float(len(br[0])) for br in in_progress_branches])),
-                min_len, len(completed_branches)
+                min_len, len(completed_branches), reason_returned
             ))
         # filter out long branch
         if branch.count > n_max_skip:
+            reason_returned['skipped>max_skip'] += 1
             continue
-        in_progress_branches += perform_matching_loop(mus, rec, branch)
+        new_branches = perform_matching_loop(mus, rec, branch)
+        in_progress_branches += new_branches
+        # sort in_progress_branches
+        in_progress_branches = sort_in_progress_branches(in_progress_branches)
         i += 1
+    print(time.time() - start)
 
+#294 231 764
 
 # returns a list of (mus, rec, branch) tuples to append to in_progress_branches
 # returns [] if nothing should be added
@@ -50,6 +71,7 @@ def perform_matching_loop(mus, rec, branch, mus_check=(False, None)):
     mus, mus_chord = next_chord(mus)
     # no mus notes left to match, so this branch is complete
     if mus_completed(branch, mus_chord, len(rec)):
+        reason_returned['mus_completed'] += 1
         return []
     rec_chord = rec[:len(mus_chord)]
     rec = rec[len(rec_chord):]
@@ -57,6 +79,7 @@ def perform_matching_loop(mus, rec, branch, mus_check=(False, None)):
     branch = update_branch(branch, match_update)
     # mus and rec chord are different lengths, so should be out of rec notes. Branch is complete
     if rec_completed(branch, mus_chord, rec_chord, len(rec)):
+        reason_returned['rec_completed'] += 1
         return []
     if mus_check[0]:
         prev_rec_indices = mus_check[1]
@@ -65,6 +88,7 @@ def perform_matching_loop(mus, rec, branch, mus_check=(False, None)):
         # if so, then deleting mus was the wrong assumption. skip this branch
         for r in prev_rec_indices:
             if r in cur_rec_indices:
+                reason_returned['del_mus_wrong'] += 1
                 return []
     return account_for_error_cases(mus, rec, branch, mus_chord, rec_chord)
 
@@ -88,20 +112,25 @@ def del_rec_branch(mus, rec, mus_chord, rec_chord, branch):
         match_update, mus_chord, rec_chord = attempt_chord_matching(mus_chord, rec_chord)
         branch = update_branch(branch, match_update)
         if rec_completed(branch, mus_chord, rec_chord, len(rec)):
+            reason_returned['rec_completed'] += 1
             return []
     if skipped > N_LOCAL_MAX_SKIP:
+        reason_returned['skipped>local_max_skip'] += 1
         return []
     else:
+        reason_returned['del_rec'] += 1
         return [(mus.copy(), rec.copy(), branch.increment(skipped))]
 
 def del_both_branch(mus, rec, mus_chord, rec_chord, branch):
     skipped = len(mus_chord) + len(rec_chord)
+    reason_returned['del_both'] += 1
     return [(mus.copy(), rec.copy(), branch.increment(skipped))]
 
 def account_for_error_cases(mus, rec, branch, mus_chord, rec_chord):
     # case 1: everything is matched: recurse and ignore other cases. Skipped count not incremented
     assert (len(mus_chord) == len(rec_chord))
     if len(mus_chord) == 0 and len(rec_chord) == 0:
+        reason_returned['everything_matched'] += 1
         return [(mus.copy(), rec.copy(), branch)]
     else:
         new_branches = []
@@ -199,7 +228,15 @@ def increment_skipped(matches_map_list, skipped):
         matches_map_list[i].count += skipped
     return matches_map_list
 
-def sort_potential_matches(potential_matches):
+def sort_in_progress_branches(branches):
+    def sort_fn(elem):
+        # elem should be a MatchesMap
+        return elem[2].count / (len(elem[2].map) + 1)
+    # should sort from low to high
+    branches = sorted(branches, key=sort_fn, reverse=True)
+    return branches
+
+def sort_completed_branches(potential_matches):
     def sort_fn(elem):
         # elem should be a MatchesMap
         return elem.count
@@ -207,15 +244,31 @@ def sort_potential_matches(potential_matches):
     potential_matches = sorted(potential_matches, key=sort_fn)
     return potential_matches
 
-def filter_potential_matches(potential_matches):
-    potential_matches = sort_potential_matches(potential_matches)
+def filter_completed_branches(branches_list):
     # cut off matches maps with high skipped counts
-    if len(potential_matches) > N_BRANCHES + 10:
-        potential_matches = potential_matches[:N_BRANCHES]
-        assert(len(potential_matches) == N_BRANCHES)
-        return potential_matches
+    if len(branches_list) > N_BRANCHES + 10:
+        branches_list = sort_completed_branches(branches_list)
+        branches_list = branches_list[:N_BRANCHES]
+        assert(len(branches_list) == N_BRANCHES)
+        return branches_list
     else:
-        return potential_matches
+        return branches_list
+
+def pop_best_branch(in_progress_branches):
+    if True:
+        return in_progress_branches.pop(-1)
+    else:
+        index = -1
+        best_count = 1.0
+        for i in range(len(in_progress_branches)):
+            if len(in_progress_branches[i][2].map) == 0:
+                index = -1
+                break
+            if in_progress_branches[i][2].count / len(in_progress_branches[i][2].map) < best_count:
+                best_count = in_progress_branches[i][2].count / len(in_progress_branches[i][2].map)
+                index = i
+        mus, rec, branch = in_progress_branches.pop(index)
+        return mus, rec, branch
 
 class MatchesMap:
     # just a map with associated data. Data is a count of skipped notes
@@ -233,4 +286,7 @@ class MatchesMap:
     def increment(self, count):
         self.count += count
         return self
+
+    def __len__(self):
+        return len(self.map)
 

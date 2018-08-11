@@ -10,6 +10,7 @@ x_global = None
 y_global = None
 
 def setFiles(files, path):
+    print(path)
     if files is None:
         files = [path + '/' + name for name in os.listdir(path)]
     else:
@@ -27,7 +28,7 @@ def loadSongLists(files=None, for_predict=False):
     musList = []
     musNames = []
     cwd = Path(os.getcwd())
-    path = str(cwd.parent) + '/mus' + app
+    path = str(cwd) + '/mus' + app
     musFiles = setFiles(files, path)
     for file in musFiles:
         name, song = note.readPIDI(file)
@@ -36,7 +37,7 @@ def loadSongLists(files=None, for_predict=False):
 
     recList = []
     recNames = []
-    path = str(cwd.parent) + '/rec' + app
+    path = str(cwd) + '/rec' + app
     recFiles = setFiles(files, path)
     for file in recFiles:
         name, song = note.readPIDI(file)
