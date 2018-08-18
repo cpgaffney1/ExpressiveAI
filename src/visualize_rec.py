@@ -12,9 +12,12 @@ import src.matching_util
 import src.note_util
 import argparse
 import pickle
+import matplotlib as plt
 
-def main(args):
-    n_files = 33
+n_files = 33
+
+
+def match(args):
     #musList, recList, predictedMatchesMapList, songNames = util.match_by_predict(n_files=n_files)
     if args.files is None:
         args.files = list(range(n_files))
@@ -56,6 +59,36 @@ def main(args):
             print('Failed to save matching')
         pylab.clf()
 
+def load_and_vis(args):
+    index_to_match_map = src.rnn_util.load_match_maps()
+    print(len(index_to_match_map))
+    musList, musNames, recList, recNames = src.rnn_util.loadSongLists(files=list(range(n_files)), for_predict=False)
+    for i in range(len(recList)):
+        print(i)
+        rec = recList[i]
+        print(len(rec))
+        mus = musList[i]
+        match = index_to_match_map.get(str(i), None)
+        print(match)
+        if match is None:
+            continue
+        x = []
+        y = []
+        for mus_index in range(len(mus)):
+            rec_index = match.get(mus_index, None)
+            x.append(mus[mus_index]['start'])
+            if rec_index is None:
+                y.append(0)
+            else:
+                print(mus_index)
+                print(rec_index)
+                assert(mus[mus_index]['key'] == rec[rec_index]['key'])
+                y.append(rec[rec_index]['start'])
+
+        pylab.plot(x, y)
+        pylab.title(musNames[i])
+        pylab.show()
+
 
 if __name__ == '__main__':
     ### TODO add support for setting the model from the command line
@@ -63,8 +96,18 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Trains and tests the model.')
     subparsers = parser.add_subparsers()
 
-    parser.add_argument('-f', '--files', nargs='*', help='Set flag', required=False)
+    command_parser = subparsers.add_parser('match', help='')
+    command_parser.add_argument('-f', '--files', nargs='*', help='Set flag', required=False)
+    command_parser.set_defaults(func=match)
+
+
+    command_parser = subparsers.add_parser('load_and_vis')
+    command_parser.set_defaults(func=load_and_vis)
 
 
     ARGS = parser.parse_args()
-    main(ARGS)
+    if ARGS.func is None:
+        parser.print_help()
+        exit(1)
+    else:
+        ARGS.func(ARGS)

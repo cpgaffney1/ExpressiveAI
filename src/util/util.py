@@ -1,8 +1,7 @@
-import heapq, collections, re, sys, time, os, random, time
+import heapq, random, time
 import numpy as np
-import copy
 from keras.models import load_model
-import src.note_util as note_util
+import src.util.note_util as note_util
 import src
 
 #########################################################

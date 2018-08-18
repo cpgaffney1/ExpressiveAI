@@ -1,5 +1,5 @@
 NAME
-C:\Users\cpgaf\OneDrive\Documents\NetBeansProjects\Expressive\files\beethoven\rec\elise.mid
+elise
 {76,0,31,64,0,276,1}
 {75,1,47,64,248,488,1}
 {76,2,58,64,456,674,1}
