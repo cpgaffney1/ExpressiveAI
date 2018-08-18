@@ -3,11 +3,29 @@ import numpy as np
 from src import note_util as note
 from sklearn import preprocessing
 from pathlib import Path
+import pickle
 
 TIMESTEPS = 20
 
 x_global = None
 y_global = None
+
+def load_match_maps():
+    files = os.listdir('matchings')
+    index_to_match_map = {}
+    for f in files:
+        match_map = None
+        path = 'matchings/' + f
+        try:
+            with open(path, 'rb') as pickle_file:
+                match_map = pickle.load(pickle_file)
+        except:
+            print('Warning: failed to load map')
+        st = f
+        st = st.replace('match', '')
+        index_to_match_map[st] = match_map
+    print(index_to_match_map.keys())
+    return index_to_match_map
 
 def setFiles(files, path):
     print(path)

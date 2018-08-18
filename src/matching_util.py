@@ -3,10 +3,10 @@ import copy
 import time
 
 N_BRANCHES = 10000
-N_IN_PROGRESS = 10000
+N_IN_PROGRESS = 20000
 MAX_SKIP_FRACTION = 0.1
 # used only for del_rec_branch
-N_LOCAL_MAX_SKIP = 8
+N_LOCAL_MAX_SKIP = 20
 n_max_skip = 0
 completed_branches = []
 reached = False
@@ -27,6 +27,7 @@ def get_matching(mus, rec):
     completed_branches = []
     global n_max_skip
     n_max_skip = int(MAX_SKIP_FRACTION * len(mus))
+    print(n_max_skip)
     perform_matching([(mus, rec, MatchesMap())])
     print('finished matching')
     completed_branches = sort_completed_branches(completed_branches)
@@ -46,7 +47,8 @@ def perform_matching(in_progress_branches):
         if len(mus) < min_len:
             min_len = len(mus)
         if i % 1000 == 0:
-            if time.time() - start > 60*60*4 and len(completed_branches) > 0:
+            in_progress_branches = sort_in_progress_branches(in_progress_branches)
+            if time.time() - start > 60*60*8 and len(completed_branches) > 0:
                 break
             print('In progress: {}, Average mus notes: {}, Furthest progress: {}, Completed: {}, \nReasons: {}\n'.format(
                 len(in_progress_branches), np.average(np.asarray([float(len(br[0])) for br in in_progress_branches])),
@@ -58,8 +60,6 @@ def perform_matching(in_progress_branches):
             continue
         new_branches = perform_matching_loop(mus, rec, branch)
         in_progress_branches += new_branches
-        # sort in_progress_branches
-        in_progress_branches = sort_in_progress_branches(in_progress_branches)
         i += 1
     print(time.time() - start)
 
@@ -163,6 +163,7 @@ def attempt_chord_matching(mus_chord, rec_chord):
                 mus_chord = mus_chord[:m] + mus_chord[m+1:]
                 rec_chord = rec_chord[:r] + rec_chord[r+1:]
                 m -= 1
+                r -= 1
                 break
             r += 1
         m += 1
@@ -254,8 +255,8 @@ def filter_completed_branches(branches_list):
     else:
         return branches_list
 
-def pop_best_branch(in_progress_branches):
-    if True:
+def pop_best_branch(in_progress_branches, last=True):
+    if last:
         return in_progress_branches.pop(-1)
     else:
         index = -1
