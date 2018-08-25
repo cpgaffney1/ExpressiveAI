@@ -7,14 +7,13 @@ sys.path.append(cwd.parent.__str__())
 sys.path.append(os.getcwd())
 print(sys.path)
 import src
-import src.rnn_util
+import src.util.rnn_util
 import src.matching_util
-import src.note_util
+import src.util.note_util
 import argparse
 import pickle
-import matplotlib as plt
 
-n_files = 33
+n_files = 56
 
 
 def match(args):
@@ -30,9 +29,9 @@ def match(args):
             print('file exists')
             exit()
 
-    musList, musNames, recList, recNames = src.rnn_util.loadSongLists(files=args.files, for_predict=False)
-    musList, recList = src.note_util.normalizeTimes(musList, recList)
-    musList, recList = src.note_util.normalizeIndices(musList, recList)
+    musList, musNames, recList, recNames = src.util.rnn_util.loadSongLists(files=args.files, for_predict=False)
+    musList, recList = src.util.note_util.normalizeTimes(musList, recList)
+    musList, recList = src.util.note_util.normalizeIndices(musList, recList)
     #recList, matchesMapList = util.trim(recList, matchesMapList)
     assert(len(musList) == len(recList))
     for i in range(len(recList)):
@@ -60,16 +59,14 @@ def match(args):
         pylab.clf()
 
 def load_and_vis(args):
-    index_to_match_map = src.rnn_util.load_match_maps()
+    index_to_match_map = src.util.rnn_util.load_match_maps()
     print(len(index_to_match_map))
-    musList, musNames, recList, recNames = src.rnn_util.loadSongLists(files=list(range(n_files)), for_predict=False)
+    musList, musNames, recList, recNames = src.util.rnn_util.loadSongLists(files=list(range(n_files)), for_predict=False)
     for i in range(len(recList)):
         print(i)
         rec = recList[i]
-        print(len(rec))
         mus = musList[i]
         match = index_to_match_map.get(str(i), None)
-        print(match)
         if match is None:
             continue
         x = []
@@ -80,8 +77,6 @@ def load_and_vis(args):
             if rec_index is None:
                 y.append(0)
             else:
-                print(mus_index)
-                print(rec_index)
                 assert(mus[mus_index]['key'] == rec[rec_index]['key'])
                 y.append(rec[rec_index]['start'])
 

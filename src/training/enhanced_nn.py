@@ -4,7 +4,7 @@ from keras.models import Model
 from keras.layers import Dense, Input
 import keras.layers as layers
 import keras.regularizers as reg
-from src import enhanced_nn_predict as predict
+from src.training import enhanced_nn_predict as predict
 from keras.initializers import TruncatedNormal
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping
 import keras.backend as K

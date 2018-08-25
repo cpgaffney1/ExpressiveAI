@@ -1,13 +1,11 @@
-from src import rnn_util as util
-from src import note_util as note
-import tensorflow as tf
+from src.util import rnn_util as util, note_util as note
 from keras.models import Sequential
-from keras.layers import LSTM, Dense, Dropout, Lambda, Flatten
+from keras.layers import LSTM, Dense
 from keras.callbacks import EarlyStopping
 from keras.layers import Bidirectional
 import keras.regularizers as reg
 import numpy as np
-from keras.initializers import TruncatedNormal, glorot_uniform
+from keras.initializers import glorot_uniform
 from keras import optimizers
 import keras.backend as K
 from keras.models import load_model

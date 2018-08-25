@@ -1,18 +1,11 @@
 from src import util
-import tensorflow as tf
 from keras.models import Sequential
-from keras.layers import LSTM, Dense
+from keras.layers import Dense
 from keras.callbacks import EarlyStopping
-from keras.layers import Dropout, Flatten
-from keras.initializers import TruncatedNormal
-from keras.layers import Bidirectional
-import src.rnn_predict as predict
-import keras.regularizers as reg
+from keras.layers import Flatten
 import numpy as np
 import time
 from keras.utils import to_categorical
-from keras.models import load_model
-import keras.backend as K
 
 train = True
 
